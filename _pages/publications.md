@@ -18,12 +18,6 @@ research_topics:
     title: Model Merging
   - id: learning
     title: Training Dynamics & Generalization
-  - id: vision-language
-    title: Vision–Language Models
-  - id: situational-awareness
-    title: Situational Awareness
-  - id: world-models
-    title: World Models
   - id: applied
     title: Applied Machine Learning
 ---
