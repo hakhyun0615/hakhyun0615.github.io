@@ -6,14 +6,31 @@ description:
 nav: true
 nav_order: 1
 research_topics:
-  - id: interpretability
-    title: Mechanistic Interpretability
+  - id: interpretability-training
+    title: Mechanistic Interpretability & Training Dynamics
+    subtopics:
+      - id: sparse-autoencoders
+        title: Sparse Autoencoders
+      - id: multilingual
+        title: Multilingual Models
+      - id: interventions
+        title: Interventions
+      - id: training-dynamics
+        title: Training Dynamics
+      - id: vision-language
+        title: Vision–Language Models
+      - id: world-models
+        title: World Models
+      - id: situational-awareness
+        title: Situational Awareness
+      - id: interpretable-architectures
+        title: Interpretable Architectures
+      - id: interpretability-evaluation
+        title: Interpretability Evaluation
   - id: multi-agent
     title: Multi-Agent Systems
   - id: systems
     title: AI Systems
-  - id: learning
-    title: Training Dynamics & Generalization
   - id: applied
     title: Applied Machine Learning
 ---
@@ -24,8 +41,18 @@ research_topics:
     margin-top: 2.5rem;
   }
   .publications .publication-section > h2 {
-    margin: 0 0 0.75rem;
-    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--global-text-color-light);
+  }
+  .publications .publication-subsection + .publication-subsection {
+    margin-top: 1rem;
+  }
+  .publications .publication-subsection > h3 {
+    margin: 0 0 0.4rem;
+    font-size: 0.85rem;
     font-weight: 500;
     line-height: 1.5;
     color: var(--global-text-color-light);
@@ -37,6 +64,9 @@ research_topics:
     margin: 0;
     padding: 1.1rem 0 1.5rem;
     border-top: 1px solid var(--global-divider-color);
+  }
+  .publications .publication-subsection ol.bibliography > li {
+    padding: 0.8rem 0 1rem;
   }
 
   /* Use the full content width; each venue is already written below its title. */
@@ -133,7 +163,16 @@ research_topics:
   {% for topic in page.research_topics %}
     <section class="publication-section" aria-labelledby="topic-{{ topic.id }}">
       <h2 id="topic-{{ topic.id }}">{{ topic.title }}</h2>
-      {% bibliography --query @*[research_area={{topic.id}}] %}
+      {% if topic.subtopics %}
+        {% for subtopic in topic.subtopics %}
+          <section class="publication-subsection" aria-labelledby="topic-{{ topic.id }}-{{ subtopic.id }}">
+            <h3 id="topic-{{ topic.id }}-{{ subtopic.id }}">{{ subtopic.title }}</h3>
+            {% bibliography --query @*[research_topic={{subtopic.id}}] %}
+          </section>
+        {% endfor %}
+      {% else %}
+        {% bibliography --query @*[research_area={{topic.id}}] %}
+      {% endif %}
     </section>
   {% endfor %}
 </div>

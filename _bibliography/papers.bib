@@ -14,7 +14,8 @@
 @inproceedings{kim2026translation,
   title       = {<a href="https://aclanthology.org/2026.stereacult-1.11/">Translation Is Not Representation: English-Hub Routing in Cross-Lingual Bias Benchmarks</a>},
   author      = {Kim, Hak Hyun and Huh, Benjamin},
-  research_area = {interpretability},
+  research_area = {interpretability-training},
+  research_topic = {multilingual},
   booktitle   = {ACL 2026 Workshop on StereACuLT},
   note        = {<details class="rq"><summary><b>Q.</b> Are the representations underlying cross-lingual bias benchmark scores language-agnostic?</summary><div class="rq-answer"><b>A.</b> Not necessarily. We compare English bias questions with their Japanese translations across English-centric, Japanese-adapted, and balanced bilingual models. CKA finds strong geometric alignment between the languages in every model. But a multi-anchor logit lens shows that internal language preferences vary with training history despite this similarity, with English-hub signals weakening after Japanese adaptation and under balanced bilingual training. Even with high CKA, cross-lingual bias scores describe language-specific stereotype preferences without establishing language-agnostic representations of bias.</div></details>}
 }
@@ -22,7 +23,8 @@
 @inproceedings{huh2026easy,
   title       = {Easy to Add, Hard to Erase: Causal Evidence on Stereotype Editing in LLMs},
   author      = {Huh, Benjamin and Kim, Hak Hyun and Peng, Jason},
-  research_area = {interpretability},
+  research_area = {interpretability-training},
+  research_topic = {interventions},
   booktitle   = {ACL 2026 Workshop on StereACuLT},
   note        = {<details class="rq"><summary><b>Q.</b> If a stereotype is carried by a linear direction in the residual stream, does erasing that direction stop the behavior?</summary><div class="rq-answer"><b>A.</b> No. We build the direction from the gap between a stereotype item and its anti-stereotype twin, measured at the word where the two actually differ, then at the decision token either add that direction back or project it out, and compare the two edits on the same items. Adding it moves the model toward the stereotype; projecting it out shifts confidence without flipping many decisions, because most items sit far from the boundary. Component rankings do not rescue this: their predicted signs are not reliable enough to edit by, and between one in seven and one in four of the top-ranked components push against the intended edit. Finding the direction earns a control knob, not a fix.</div></details>}
 }
@@ -73,7 +75,8 @@
 @article{kim2026emergence,
   title       = {Inside Emergence: Structure-Behaviour Gaps in Language Model Training},
   author      = {Kim, Hak Hyun and Raj, Yash and Vosoughi, Soroush},
-  research_area = {learning},
+  research_area = {interpretability-training},
+  research_topic = {training-dynamics},
   journal     = {Under review at NeurIPS 2026},
   note        = {<details class="rq"><summary><b>Q.</b> When a capability appears abruptly during training, does the structure behind it change at that moment, or was it already in place?</summary><div class="rq-answer"><b>A.</b> Usually earlier. Tracking the spectra of mean-ablation patching matrices across 150 Pythia trajectories from 70M to 410M, 3 scales &times; 5 tasks &times; 10 seeds, structural reorganization completes before the capability becomes measurable in 94% of runs, by thousands of steps. Ablating at one of those pre-emergence checkpoints confirms it: the components already prominent there carry most of the capability that surfaces later. On sharpness the field has argued over whether the jump happens inside the model or is manufactured by the metric used to score it. It turns out to depend on the task. For subject-verb agreement and induction the behavior curve turns much more sharply than the structural one, while for factual recall and docstrings the two turn together. Both patterns are present, in different tasks.</div></details>}
 }
@@ -82,7 +85,8 @@
   selected    = {true},
   title       = {A Curvature Phase Transition Governs Coherence Penalty Efficiency Against Feature Absorption in SAEs},
   author      = {Kim, Hak Hyun and Raj, Yash and Chin, Peter and Vosoughi, Soroush},
-  research_area = {interpretability},
+  research_area = {interpretability-training},
+  research_topic = {sparse-autoencoders},
   journal     = {Under review at NeurIPS 2026},
   note        = {<details class="rq"><summary><b>Q.</b> Can feature absorption, where one sparse autoencoder atom carries several concepts at once, be solved?</summary><div class="rq-answer"><b>A.</b> Largely. Absorption is a spurious local minimum of the training loss. A coherence penalty summing pairwise overlaps raised to <i>p</i> pushes absorbed atoms apart for any <i>p</i> &gt; 0, but the penalty weight this takes is set by the curvature at that minimum, which we derive in closed form and which changes sign at <i>p</i> = 2. Below 2 that curvature is negative, so once the penalty weight passes a threshold the closed form gives, absorption stops being a minimizer and descent leaves it. Above 2 the curvature is positive and no such threshold exists. At exactly 2 the penalty is curvature-blind, though only in the orthogonal idealization. Measured features are correlated, which makes <i>p</i> = 2 slightly destabilizing rather than neutral and, since lower <i>p</i> costs reconstruction, makes it the practical operating point. The predicted ordering holds on Pythia-160M and Gemma-2-2B, where full absorption events drop 89%, not explained by atoms firing less. The effect can reverse for independent-threshold architectures.</div></details>}
 }
@@ -90,7 +94,8 @@
 @article{kim2026knowing,
   title       = {LLMs Know but Don't Follow: Probing the Knowing-Doing Gap in Multi-Turn Instruction Compliance},
   author      = {Kim, Hak Hyun and Huh, Benjamin and Vosoughi, Soroush},
-  research_area = {interpretability},
+  research_area = {interpretability-training},
+  research_topic = {interventions},
   journal     = {Under review at ICLR 2027},
   note        = {<details class="rq"><summary><b>Q.</b> Why do LLMs stop following an instruction that remains in context?</summary><div class="rq-answer"><b>A.</b> The instruction remains represented while losing influence over generation. To investigate how this influence is lost, we built a new multi-turn dataset with 20 turns per conversation in which a constraint is given once, followed by neutral follow-up questions. We examine two candidate mechanisms: constraint projection decay and attention dilution. First, the generation state loses projection onto a concept activation vector (CAV), a direction associated with the constraint. Restoring this projection through CAV steering raises compliance by 26–32 percentage points at the selected intervention strengths. Second, attention to the original instruction weakens as the conversation grows. Restoring this attention raises compliance by 38–58 percentage points at the selected intervention strengths. The two interventions often repair the same failures and provide limited additional benefit when combined, suggesting a shared bottleneck in using the instruction to guide generation.</div></details>}
 }
@@ -98,7 +103,8 @@
 @article{kim2027geotrace,
   title       = {GeoTrace: Causal Trajectories of Object-Bound Geometry in Vision--Language Models},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability},
+  research_area = {interpretability-training},
+  research_topic = {vision-language},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Where does the causal path from object-bound geometry to a VLM’s final judgment break down?</div>}
 }
@@ -106,7 +112,8 @@
 @article{kim2027causalorg,
   title       = {How Neural Computation Organizes During Transformer Training},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {learning},
+  research_area = {interpretability-training},
+  research_topic = {training-dynamics},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Can we predict and control the emergence of higher-level causal organization during transformer training?</div>}
 }
@@ -115,7 +122,8 @@
 @article{kim2027selflocation,
   title       = {Self-Location as a Missing Link in LLM Situational Awareness},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability},
+  research_area = {interpretability-training},
+  research_topic = {situational-awareness},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Does a distinct self-location representation determine whether situational information guides an LLM's behavior?</div>}
 }
@@ -123,7 +131,8 @@
 @article{kim2027worldmodel,
   title       = {When Does Autoregressive Prediction Build a World Model?},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {learning},
+  research_area = {interpretability-training},
+  research_topic = {world-models},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> When does next-move prediction learn game states and rules rather than rely on pattern matching or memorization?</div>}
 }
@@ -131,7 +140,8 @@
 @article{kim2027publicstate,
   title       = {Architecting Language Models for Observable Reasoning},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability},
+  research_area = {interpretability-training},
+  research_topic = {interpretable-architectures},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Can language-model inference be organized around a human-legible public computational state sufficient for subsequent reasoning without chain-of-thought?</div>}
 }
@@ -163,7 +173,8 @@
 @article{kimminoritylanguages,
   title       = {How Minority-Language Capabilities Form in English-Dominant Pretraining?},
   author      = {Kim, Hak Hyun and Chin, Peter and Vosoughi, Soroush},
-  research_area = {learning},
+  research_area = {interpretability-training},
+  research_topic = {multilingual},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> How does English learning causally shape the formation, sharing, specialization, and reorganization of minority-language representations and computations during English-dominant multilingual pretraining?</div>}
 }
@@ -179,7 +190,8 @@
 @article{kimevidence,
   title       = {The Evidence Behind Claims of Understanding and Controlling Neural Networks},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability},
+  research_area = {interpretability-training},
+  research_topic = {interpretability-evaluation},
   journal     = {Under review at Nature},
   note        = {<div class="rq"><b>Q.</b> How far does current evaluation evidence justify claims of understanding and controlling neural networks, and how can the identified limitations be addressed?</div>}
 }
