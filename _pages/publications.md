@@ -10,8 +10,6 @@ research_topics:
     title: Mechanistic Interpretability
   - id: multi-agent
     title: Multi-Agent Systems
-  - id: multilingual
-    title: Multilingual Representations
   - id: systems
     title: AI Systems
   - id: learning
