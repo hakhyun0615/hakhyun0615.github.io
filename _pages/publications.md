@@ -14,8 +14,6 @@ research_topics:
     title: Multilingual Representations
   - id: systems
     title: AI Systems
-  - id: model-merging
-    title: Model Merging
   - id: learning
     title: Training Dynamics & Generalization
   - id: applied

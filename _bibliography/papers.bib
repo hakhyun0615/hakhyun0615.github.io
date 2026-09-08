@@ -65,7 +65,7 @@
 @article{kim2026merging,
   title       = {Scale Imbalance Drives Model Merging Degradation},
   author      = {Kim, Hak Hyun and Chin, Peter},
-  research_area = {model-merging},
+  research_area = {systems},
   journal     = {Under review at NeurIPS 2026},
   note        = {<details class="rq"><summary><b>Q.</b> Does the damage from merging two fine-tuned models come from directional conflict between their task vectors?</summary><div class="rq-answer"><b>A.</b> Not mainly. Fine-tuning the same way on different tasks leaves task-vector norms differing by up to 29x, and in that regime the log ratio of the two norms explains most of the predictable degradation while global directional coherence explains almost none. Coherence is not useless, but its effect is small enough that it only becomes visible once the differences between models, methods, and tasks are accounted for, whereas the scale effect is large enough to show through the raw numbers. Pruning methods such as DARE look coherence-dominant only at moderate imbalance, because pruning suppresses coherence while leaving the scale ratio intact. Rescaling task vectors by their norms turns the diagnostic into a fix, except for weak experts below 1B.</div></details>}
 }
