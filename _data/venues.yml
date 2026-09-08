@@ -1,0 +1,2 @@
+# Per-`abbr` badge colour and link. Empty: publication badges use the site
+# accent colour (--global-theme-color), overridden in _includes/footer.liquid.

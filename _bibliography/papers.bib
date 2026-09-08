@@ -1,0 +1,185 @@
+---
+---
+
+@inproceedings{kim2026position,
+  selected     = {true},
+  title        = {<a href="https://openreview.net/forum?id=fxSfYP7IMI">Position: Multi-Agent Explainability Needs Contracts Before Methods</a>},
+  author       = {Kim, Hak Hyun and Huh, Benjamin and Vosoughi, Soroush},
+  research_area = {multi-agent},
+  booktitle    = {International Conference on Machine Learning (ICML), Position Paper Track},
+  year         = {2026},
+  note         = {<details class="rq"><summary><b>Q.</b> Two papers each claim that their method explains multi-agent failures better. What has to be specified before those claims can be compared?</summary><div class="rq-answer"><b>A.</b> Two contracts, declared before any method is proposed. The Research Contract fixes what is being explained, to whom, at what intervention unit, within what evaluation bounds, under what adversarial conditions, and with what audit trail. The Agent Contract states the behavior the system was supposed to produce, as obligations, permissions, prohibitions, violation criteria, and accountability chains, which is the baseline a deviation gets explained against. Without both, a reported score is not comparable across papers and cannot be carried into a deployment decision.</div></details>}
+}
+
+@inproceedings{kim2026translation,
+  title       = {<a href="https://aclanthology.org/2026.stereacult-1.11/">Translation Is Not Representation: English-Hub Routing in Cross-Lingual Bias Benchmarks</a>},
+  author      = {Kim, Hak Hyun and Huh, Benjamin},
+  research_area = {multilingual},
+  booktitle   = {ACL 2026 Workshop on StereACuLT},
+  note        = {<details class="rq"><summary><b>Q.</b> Are the representations underlying cross-lingual bias benchmark scores language-agnostic?</summary><div class="rq-answer"><b>A.</b> Not necessarily. We compare English bias questions with their Japanese translations across English-centric, Japanese-adapted, and balanced bilingual models. CKA finds strong geometric alignment between the languages in every model. But a multi-anchor logit lens shows that internal language preferences vary with training history despite this similarity, with English-hub signals weakening after Japanese adaptation and under balanced bilingual training. Even with high CKA, cross-lingual bias scores describe language-specific stereotype preferences without establishing language-agnostic representations of bias.</div></details>}
+}
+
+@inproceedings{huh2026easy,
+  title       = {Easy to Add, Hard to Erase: Causal Evidence on Stereotype Editing in LLMs},
+  author      = {Huh, Benjamin and Kim, Hak Hyun and Peng, Jason},
+  research_area = {interpretability},
+  booktitle   = {ACL 2026 Workshop on StereACuLT},
+  note        = {<details class="rq"><summary><b>Q.</b> If a stereotype is carried by a linear direction in the residual stream, does erasing that direction stop the behavior?</summary><div class="rq-answer"><b>A.</b> No. We build the direction from the gap between a stereotype item and its anti-stereotype twin, measured at the word where the two actually differ, then at the decision token either add that direction back or project it out, and compare the two edits on the same items. Adding it moves the model toward the stereotype; projecting it out shifts confidence without flipping many decisions, because most items sit far from the boundary. Component rankings do not rescue this: their predicted signs are not reliable enough to edit by, and between one in seven and one in four of the top-ranked components push against the intended edit. Finding the direction earns a control knob, not a fix.</div></details>}
+}
+
+@inproceedings{kim2026clasp,
+  title       = {<a href="https://openreview.net/forum?id=D7Z4YZS0zG">CLASP: Retrofitting Cost--Latency SLO Compliance onto Any LLM Router</a>},
+  author      = {Kim, Hak Hyun and Huh, Benjamin and Moon, Jimin and Lee, Chia-Wei and Peng, Jason and Marrero, Wesley J. and Vosoughi, Soroush},
+  research_area = {systems},
+  booktitle   = {ICML 2026 Workshop on DEMO},
+  note        = {<details class="rq"><summary><b>Q.</b> How can an LLM router be kept inside a cost and latency budget, without retraining it?</summary><div class="rq-answer"><b>A.</b> We introduce CLASP, a controller that sits on top of any existing router so that its choices of topology and model tier violate a per-query cost and latency budget no more often than the target allows. Offline, it reads a cost and latency cache and masks out the actions that breach the budget too often, then calibrates one penalty weight for cost and one for latency. Online, it predicts each query's cost and latency and subtracts those two weighted penalties from the router's own quality score before choosing an action. A new budget therefore costs a recomputed mask and two weights rather than a retrained router, and when the deployment drifts the weights keep updating from what actually happened.</div></details>}
+}
+
+@inproceedings{haider2026policyllm,
+  title       = {<a href="https://openreview.net/forum?id=9raGR7DnlY">PolicyLLM: Neuro-Symbolic Policy Extraction and Enforcement for Runtime AI Governance</a>},
+  author      = {Haider*, Syed Ali and Huh*, Benjamin and Kim*, Hak Hyun and Nalagatla*, Goutham and Guerrero Alvarez, Carlos and Raj, Yash and Vosoughi, Soroush},
+  research_area = {systems},
+  booktitle   = {ICML 2026 Workshop on TAIGR},
+  note        = {<details class="rq"><summary><b>Q.</b> How can a deployment produce a per-output record of which policies applied, what facts were checked, and what was decided?</summary><div class="rq-answer"><b>A.</b> We present PolicyLLM, which offline compiles policy documents into a decision graph and uses the Z3 SMT solver to find contradictions among the compiled rules, settling them by an explicit priority ordering. At inference time it both steers generation with policy-derived scaffolding and checks the response against that bundle, routing it to pass, auto-correct, regenerate, or escalate, and appending the decision to a hash-chained log. The solver certifies the rules it was handed, not that those rules were read correctly out of the policy documents, so a response it cannot verify goes to a human reviewer rather than to the user.</div></details>}
+}
+
+@article{kim2026tsaga,
+  selected    = {true},
+  title       = {<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4971984">TSA-GA Net: A Dual Attention Mechanism for Predicting Real Estate Transaction Prices</a>},
+  author      = {Kim*, Hak Hyun and Yoo*, Hwankyu and Oh, Hayoung},
+  research_area = {applied},
+  journal     = {Heliyon},
+  year        = {2026},
+  note        = {<details class="rq"><summary><b>Q.</b> Can sparse, irregular real estate transaction records be predicted directly, rather than through the price index prior work fell back on?</summary><div class="rq-answer"><b>A.</b> Yes. We run the experiments on apartment transaction records from Seoul. We aggregate the apartments by complex, then embed the complex attributes together with macroeconomic indicators, which turns the sparse, irregular records into input a time series model can take. Two attention stages follow: time series attention over a twelve-month window of the same complex, which captures its price trend, and geographic attention across complexes in the same sub-district at the same month, since neighboring prices move together. This beats statistical, machine learning, and other time series deep learning baselines.</div></details>}
+}
+
+@article{kim2023apartment,
+  title       = {<a href="https://koreascience.kr/article/JAKO202313759686729.page">Apartment Price Prediction Using Deep Learning and Machine Learning</a>},
+  author      = {Kim, Hak Hyun and Yoo, Hwankyu and Oh, Hayoung},
+  research_area = {applied},
+  journal     = {KIPS Transactions on Software and Data Engineering},
+  year        = {2023},
+  note        = {<details class="rq"><summary><b>Q.</b> What does apartment price prediction gain from scaling the dataset and searching for variables systematically?</summary><div class="rq-answer"><b>A.</b> We assemble 878,928 Seoul transactions from 2015 to 2020 with 42 variables, where earlier studies used a few thousand records and chose their variables by hand. After clearing multicollinearity we compare five variable selection methods against four models. Tested on 2021, the predicted map of expensive complexes matches the real one almost exactly, but the predicted prices come out too low across the board.</div></details>}
+}
+
+@article{kim2026merging,
+  title       = {Scale Imbalance Drives Model Merging Degradation},
+  author      = {Kim, Hak Hyun and Chin, Peter},
+  research_area = {model-merging},
+  journal     = {Under review at NeurIPS 2026},
+  note        = {<details class="rq"><summary><b>Q.</b> Does the damage from merging two fine-tuned models come from directional conflict between their task vectors?</summary><div class="rq-answer"><b>A.</b> Not mainly. Fine-tuning the same way on different tasks leaves task-vector norms differing by up to 29x, and in that regime the log ratio of the two norms explains most of the predictable degradation while global directional coherence explains almost none. Coherence is not useless, but its effect is small enough that it only becomes visible once the differences between models, methods, and tasks are accounted for, whereas the scale effect is large enough to show through the raw numbers. Pruning methods such as DARE look coherence-dominant only at moderate imbalance, because pruning suppresses coherence while leaving the scale ratio intact. Rescaling task vectors by their norms turns the diagnostic into a fix, except for weak experts below 1B.</div></details>}
+}
+
+@article{kim2026emergence,
+  title       = {Inside Emergence: Structure-Behaviour Gaps in Language Model Training},
+  author      = {Kim, Hak Hyun and Raj, Yash and Vosoughi, Soroush},
+  research_area = {learning},
+  journal     = {Under review at NeurIPS 2026},
+  note        = {<details class="rq"><summary><b>Q.</b> When a capability appears abruptly during training, does the structure behind it change at that moment, or was it already in place?</summary><div class="rq-answer"><b>A.</b> Usually earlier. Tracking the spectra of mean-ablation patching matrices across 150 Pythia trajectories from 70M to 410M, 3 scales &times; 5 tasks &times; 10 seeds, structural reorganization completes before the capability becomes measurable in 94% of runs, by thousands of steps. Ablating at one of those pre-emergence checkpoints confirms it: the components already prominent there carry most of the capability that surfaces later. On sharpness the field has argued over whether the jump happens inside the model or is manufactured by the metric used to score it. It turns out to depend on the task. For subject-verb agreement and induction the behavior curve turns much more sharply than the structural one, while for factual recall and docstrings the two turn together. Both patterns are present, in different tasks.</div></details>}
+}
+
+@article{kim2026curvature,
+  selected    = {true},
+  title       = {A Curvature Phase Transition Governs Coherence Penalty Efficiency Against Feature Absorption in SAEs},
+  author      = {Kim, Hak Hyun and Raj, Yash and Chin, Peter and Vosoughi, Soroush},
+  research_area = {interpretability},
+  journal     = {Under review at NeurIPS 2026},
+  note        = {<details class="rq"><summary><b>Q.</b> Can feature absorption, where one sparse autoencoder atom carries several concepts at once, be solved?</summary><div class="rq-answer"><b>A.</b> Largely. Absorption is a spurious local minimum of the training loss. A coherence penalty summing pairwise overlaps raised to <i>p</i> pushes absorbed atoms apart for any <i>p</i> &gt; 0, but the penalty weight this takes is set by the curvature at that minimum, which we derive in closed form and which changes sign at <i>p</i> = 2. Below 2 that curvature is negative, so once the penalty weight passes a threshold the closed form gives, absorption stops being a minimizer and descent leaves it. Above 2 the curvature is positive and no such threshold exists. At exactly 2 the penalty is curvature-blind, though only in the orthogonal idealization. Measured features are correlated, which makes <i>p</i> = 2 slightly destabilizing rather than neutral and, since lower <i>p</i> costs reconstruction, makes it the practical operating point. The predicted ordering holds on Pythia-160M and Gemma-2-2B, where full absorption events drop 89%, not explained by atoms firing less. The effect can reverse for independent-threshold architectures.</div></details>}
+}
+
+@article{kim2026knowing,
+  title       = {LLMs Know but Don't Follow: Probing the Knowing-Doing Gap in Multi-Turn Instruction Compliance},
+  author      = {Kim, Hak Hyun and Huh, Benjamin and Vosoughi, Soroush},
+  research_area = {interpretability},
+  journal     = {Under review at ICLR 2027},
+  note        = {<details class="rq"><summary><b>Q.</b> Why do LLMs stop following an instruction that remains in context?</summary><div class="rq-answer"><b>A.</b> The instruction remains represented while losing influence over generation. To investigate how this influence is lost, we built a new multi-turn dataset with 20 turns per conversation in which a constraint is given once, followed by neutral follow-up questions. We examine two candidate mechanisms: constraint projection decay and attention dilution. First, the generation state loses projection onto a concept activation vector (CAV), a direction associated with the constraint. Restoring this projection through CAV steering raises compliance by 26–32 percentage points at the selected intervention strengths. Second, attention to the original instruction weakens as the conversation grows. Restoring this attention raises compliance by 38–58 percentage points at the selected intervention strengths. The two interventions often repair the same failures and provide limited additional benefit when combined, suggesting a shared bottleneck in using the instruction to guide generation.</div></details>}
+}
+
+@article{kim2027geotrace,
+  title       = {GeoTrace: Causal Trajectories of Object-Bound Geometry in Vision--Language Models},
+  author      = {Kim, Hak Hyun and Vosoughi, Soroush},
+  research_area = {vision-language},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> Where does the causal path from object-bound geometry to a VLM’s final judgment break down?</div>}
+}
+
+@article{kim2027causalorg,
+  title       = {How Neural Computation Organizes During Transformer Training},
+  author      = {Kim, Hak Hyun and Vosoughi, Soroush},
+  research_area = {learning},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> Can we predict and control the emergence of higher-level causal organization during transformer training?</div>}
+}
+
+
+@article{kim2027selflocation,
+  title       = {Self-Location as a Missing Link in LLM Situational Awareness},
+  author      = {Kim, Hak Hyun and Vosoughi, Soroush},
+  research_area = {situational-awareness},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> Does a distinct self-location representation determine whether situational information guides an LLM's behavior?</div>}
+}
+
+@article{kim2027worldmodel,
+  title       = {When Does Autoregressive Prediction Build a World Model?},
+  author      = {Kim, Hak Hyun and Vosoughi, Soroush},
+  research_area = {world-models},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> When does next-move prediction learn game states and rules rather than rely on pattern matching or memorization?</div>}
+}
+
+@article{kim2027publicstate,
+  title       = {Architecting Language Models for Observable Reasoning},
+  author      = {Kim, Hak Hyun and Vosoughi, Soroush},
+  research_area = {interpretability},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> Can language-model inference be organized around a human-legible public computational state sufficient for subsequent reasoning without chain-of-thought?</div>}
+}
+
+@article{kim2027sharesplit,
+  title       = {Training Cooperative LLM Agents: A Guide to Parameter Sharing in Reinforcement Learning},
+  author      = {Kim, Hak Hyun and Chin, Peter},
+  research_area = {multi-agent},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> When do shared, hybrid, or independent adapters work best in cooperative LLM multi-agent RL, and how does each design fail?</div>}
+}
+
+@article{kim2027fractures,
+  title       = {When Cooperation Fractures: Emergent Subgroups in LLM Multi-Agent Reinforcement Learning},
+  author      = {Kim, Hak Hyun and Chin, Peter},
+  research_area = {multi-agent},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> Which interaction and training conditions lead cooperative LLM agents to form persistent subgroups, and when does specialization become harmful collective behavior?</div>}
+}
+
+@article{kim2027recursivesafety,
+  title       = {When Task Decomposition and Safety Decomposition Disagree in Recursive Agent Spawning},
+  author      = {Kim, Hak Hyun and Chin, Peter},
+  research_area = {multi-agent},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> When agents recursively spawn subagents to solve performance-decomposable tasks, what safety-relevant information must be propagated across the spawning tree for local decisions to remain globally safe?</div>}
+}
+
+@article{kimminoritylanguages,
+  title       = {How Minority-Language Capabilities Form in English-Dominant Pretraining?},
+  author      = {Kim, Hak Hyun and Chin, Peter and Vosoughi, Soroush},
+  research_area = {multilingual},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> How does English learning causally shape the formation, sharing, specialization, and reorganization of minority-language representations and computations during English-dominant multilingual pretraining?</div>}
+}
+
+@article{kimhelios,
+  title       = {HELIOS: Designing Autoregressive Language Models for Fully Homomorphic Inference},
+  author      = {Kim, Hak Hyun and Chin, Peter},
+  research_area = {systems},
+  journal     = {Under review at ICLR 2027},
+  note        = {<div class="rq"><b>Q.</b> Which language-model architectures best suppress error amplification across autoregressive generation while minimizing the computational cost of fully homomorphic inference?</div>}
+}
+
+@article{kimevidence,
+  title       = {The Evidence Behind Claims of Understanding and Controlling Neural Networks},
+  author      = {Kim, Hak Hyun and Vosoughi, Soroush},
+  research_area = {interpretability},
+  journal     = {Under review at Nature},
+  note        = {<div class="rq"><b>Q.</b> How far does current evaluation evidence justify claims of understanding and controlling neural networks, and how can the identified limitations be addressed?</div>}
+}

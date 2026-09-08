@@ -1,0 +1,46 @@
+{% comment %}
+  Local override of the al_folio_core footer.
+
+  Two jobs:
+  1. Render an empty footer, so no copyright or theme-attribution line appears.
+     The element is kept so the theme's fixed-bottom layout rules still apply.
+  2. Carry the site-wide accent-colour override. al-folio hard-codes
+     --global-theme-color in the gem's stylesheet and exposes no config key for
+     it, and the gem's <head> has no hook for extra CSS. The footer include is
+     the one file on every page that this site owns, so the override lives here.
+
+  The two values are deliberately different in lightness, not just hue. The
+  theme paints publication badges with the accent and flips the badge text
+  between white (light mode) and near-black (dark mode), so the light value has
+  to be dark enough for white text and the dark value light enough for black
+  text. Both also serve as the body link colour against their own background.
+{% endcomment %}
+
+<style>
+  :root {
+    --global-theme-color: #1a7f4b;
+    --global-hover-color: #1a7f4b;
+    /* The gem bakes the old magenta into this one as a literal rgba(), so it
+       does not follow the accent above. Retint it to match. */
+    --global-code-bg-color: rgba(26, 127, 75, 0.06);
+  }
+  html[data-theme='dark'] {
+    --global-theme-color: #3fb27f;
+    --global-hover-color: #3fb27f;
+  }
+
+  /* Center the icon at the theme's button size instead of the library's default. */
+  #back-to-top {
+    display: grid;
+    place-items: center;
+  }
+  #back-to-top svg {
+    margin: 0;
+  }
+</style>
+
+{% if site.footer_fixed %}
+  <footer class="fixed-bottom" role="contentinfo"></footer>
+{% else %}
+  <footer class="sticky-bottom mt-5" role="contentinfo"></footer>
+{% endif %}

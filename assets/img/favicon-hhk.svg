@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="HHK">
+  <title>HHK</title>
+  <rect width="64" height="64" rx="13" fill="#1a7f4b" />
+  <path
+    fill="#ffffff"
+    d="M9 18h3.5v12.25h4V18H20v28h-3.5V33.75h-4V46H9z M25 18h3.5v12.25h4V18H36v28h-3.5V33.75h-4V46H25z M41 18h3.5v11l6-11H55l-7.7 14L55 46h-4.5l-6-11v11H41z"
+  />
+</svg>
