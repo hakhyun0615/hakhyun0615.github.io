@@ -60,23 +60,19 @@ research_topics:
   .publications .publication-subtopics {
     min-width: 0;
   }
-  .publications .publication-subsection {
-    padding-top: 1.1rem;
-    border-top: 1px solid var(--global-divider-color);
-  }
-  .publications .publication-subsection:first-child {
-    padding-top: 0;
-    border-top: 0;
-  }
   .publications .publication-subsection + .publication-subsection {
-    margin-top: 1.8rem;
+    margin-top: 2.4rem;
   }
   .publications .publication-subsection > h3 {
-    margin: 0.1rem 0 0.75rem;
+    margin: 0 0 1rem;
+    padding: 0.6rem 0.8rem;
+    border-left: 3px solid color-mix(in srgb, var(--global-text-color) 30%, transparent);
+    border-radius: 2px;
+    background-color: color-mix(in srgb, var(--global-text-color) 5%, var(--global-bg-color));
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
-    color: var(--global-text-color-light);
+    color: var(--global-text-color);
   }
   .publications ol.bibliography {
     margin: 0;

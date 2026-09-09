@@ -86,58 +86,32 @@ nav_order: 5
 </style>
 
 <div class="talks-list">
-  <section class="talk-venue" aria-labelledby="talks-icml">
-    <h2 id="talks-icml">ICML</h2>
+  <section class="talk-venue" aria-labelledby="talks-conferences">
+    <h2 id="talks-conferences">Conferences</h2>
     <ul class="talk-entries">
       <li class="talk-entry">
         <div>
-          <h3 class="talk-title">Position: Multi-Agent Explainability Needs Contracts Before Methods</h3>
-          <p class="talk-description">Poster presentation · Position Paper Track</p>
+          <h3 class="talk-title">ICML 2026</h3>
+          <p class="talk-description">Poster presentations on multi-agent explainability, LLM routing, and runtime governance.</p>
         </div>
         <time class="talk-date" datetime="2026-07">Jul 2026</time>
       </li>
       <li class="talk-entry">
         <div>
-          <h3 class="talk-title">CLASP: Retrofitting Cost–Latency SLO Compliance onto Any LLM Router</h3>
-          <p class="talk-description">Poster presentation · DEMO Workshop</p>
-        </div>
-        <time class="talk-date" datetime="2026-07">Jul 2026</time>
-      </li>
-      <li class="talk-entry">
-        <div>
-          <h3 class="talk-title">PolicyLLM: Neuro-Symbolic Policy Extraction and Enforcement for Runtime AI Governance</h3>
-          <p class="talk-description">Poster presentation · TAIGR Workshop</p>
+          <h3 class="talk-title">ACL 2026</h3>
+          <p class="talk-description">Poster presentations on cross-lingual bias evaluation and stereotype editing in LLMs.</p>
         </div>
         <time class="talk-date" datetime="2026-07">Jul 2026</time>
       </li>
     </ul>
   </section>
-  <section class="talk-venue" aria-labelledby="talks-acl">
-    <h2 id="talks-acl">ACL</h2>
+  <section class="talk-venue" aria-labelledby="talks-industry">
+    <h2 id="talks-industry">Industry</h2>
     <ul class="talk-entries">
       <li class="talk-entry">
         <div>
-          <h3 class="talk-title">Translation Is Not Representation: English-Hub Routing in Cross-Lingual Bias Benchmarks</h3>
-          <p class="talk-description">Poster presentation · StereACuLT Workshop</p>
-        </div>
-        <time class="talk-date" datetime="2026-07">Jul 2026</time>
-      </li>
-      <li class="talk-entry">
-        <div>
-          <h3 class="talk-title">Easy to Add, Hard to Erase: Causal Evidence on Stereotype Editing in LLMs</h3>
-          <p class="talk-description">Poster presentation · StereACuLT Workshop</p>
-        </div>
-        <time class="talk-date" datetime="2026-07">Jul 2026</time>
-      </li>
-    </ul>
-  </section>
-  <section class="talk-venue" aria-labelledby="talks-rabobank">
-    <h2 id="talks-rabobank">Rabobank</h2>
-    <ul class="talk-entries">
-      <li class="talk-entry">
-        <div>
-          <h3 class="talk-title">Explaining multi-agent behavior</h3>
-          <p class="talk-description">Gave a talk to Rabobank’s data science team on how to define explanations of multi-agent behavior.</p>
+          <h3 class="talk-title">Rabobank</h3>
+          <p class="talk-description">A talk on explaining multi-agent behavior for the data science team.</p>
         </div>
         <time class="talk-date" datetime="2026-07">Jul 2026</time>
       </li>
