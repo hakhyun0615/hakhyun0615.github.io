@@ -14,7 +14,7 @@ research_topics:
       - id: multilingual
         title: Multilingual Models
       - id: interventions
-        title: Interventions
+        title: Model Interventions
       - id: training-dynamics
         title: Training Dynamics
       - id: vision-language
@@ -43,7 +43,7 @@ research_topics:
   .publications .publication-section + .publication-section {
     margin-top: 2.5rem;
   }
-  .publications .publication-section:not(.publication-section-grouped),
+  .publications .publication-section,
   .publications .publication-subsection {
     display: grid;
     grid-template-columns: 8rem minmax(0, 1fr);
@@ -58,8 +58,12 @@ research_topics:
     line-height: 1.5;
     color: var(--global-text-color-light);
   }
-  .publications .publication-section-grouped > h2 {
-    margin: 0 0 1rem;
+  .publications .publication-subtopics {
+    min-width: 0;
+  }
+  .publications .publication-subsection:first-child {
+    padding-top: 0;
+    border-top: 0;
   }
   .publications .publication-subsection + .publication-subsection {
     margin-top: 1.8rem;
@@ -170,9 +174,14 @@ research_topics:
     opacity: 0.9;
   }
 
-  @media (max-width: 575px) {
-    .publications .publication-section:not(.publication-section-grouped),
+  @media (max-width: 991px) {
     .publications .publication-subsection {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.85rem;
+    }
+  }
+  @media (max-width: 575px) {
+    .publications .publication-section {
       grid-template-columns: minmax(0, 1fr);
       gap: 0.85rem;
     }
@@ -189,12 +198,14 @@ research_topics:
     <section class="publication-section{% if topic.subtopics %} publication-section-grouped{% endif %}" aria-labelledby="topic-{{ topic.id }}">
       <h2 id="topic-{{ topic.id }}">{{ topic.title }}</h2>
       {% if topic.subtopics %}
-        {% for subtopic in topic.subtopics %}
-          <section class="publication-subsection" aria-labelledby="topic-{{ topic.id }}-{{ subtopic.id }}">
-            <h3 id="topic-{{ topic.id }}-{{ subtopic.id }}">{{ subtopic.title }}</h3>
-            {% bibliography --query @*[research_topic={{subtopic.id}}] %}
-          </section>
-        {% endfor %}
+        <div class="publication-subtopics">
+          {% for subtopic in topic.subtopics %}
+            <section class="publication-subsection" aria-labelledby="topic-{{ topic.id }}-{{ subtopic.id }}">
+              <h3 id="topic-{{ topic.id }}-{{ subtopic.id }}">{{ subtopic.title }}</h3>
+              {% bibliography --query @*[research_topic={{subtopic.id}}] %}
+            </section>
+          {% endfor %}
+        </div>
       {% else %}
         {% bibliography --query @*[research_area={{topic.id}}] %}
       {% endif %}
