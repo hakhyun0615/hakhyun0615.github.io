@@ -36,37 +36,57 @@ research_topics:
 ---
 
 <style>
-  /* Match Experience's quiet headings and ruled entries. */
+  /* Pair research labels with their papers, following Certifications. */
+  .publications {
+    margin-top: 2rem;
+  }
   .publications .publication-section + .publication-section {
     margin-top: 2.5rem;
   }
+  .publications .publication-section:not(.publication-section-grouped),
+  .publications .publication-subsection {
+    display: grid;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    gap: 1.75rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
   .publications .publication-section > h2 {
-    margin: 0 0 1rem;
+    margin: 0.1rem 0 0;
     font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.5;
     color: var(--global-text-color-light);
   }
+  .publications .publication-section-grouped > h2 {
+    margin: 0 0 1rem;
+  }
   .publications .publication-subsection + .publication-subsection {
-    margin-top: 1rem;
+    margin-top: 1.8rem;
   }
   .publications .publication-subsection > h3 {
-    margin: 0 0 0.4rem;
-    font-size: 0.85rem;
+    margin: 0.1rem 0 0;
+    font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.5;
     color: var(--global-text-color-light);
   }
   .publications ol.bibliography {
     margin: 0;
+    padding: 0;
+    min-width: 0;
   }
   .publications ol.bibliography > li {
     margin: 0;
-    padding: 1.1rem 0 1.5rem;
-    border-top: 1px solid var(--global-divider-color);
+    padding: 0 0 1.2rem;
+    border: 0;
   }
-  .publications .publication-subsection ol.bibliography > li {
-    padding: 0.8rem 0 1rem;
+  .publications ol.bibliography > li + li {
+    padding-top: 1.2rem;
+    border-top: 1px solid color-mix(in srgb, var(--global-text-color) 7%, transparent);
+  }
+  .publications ol.bibliography > li:last-child {
+    padding-bottom: 0;
   }
 
   /* Use the full content width; each venue is already written below its title. */
@@ -151,6 +171,11 @@ research_topics:
   }
 
   @media (max-width: 575px) {
+    .publications .publication-section:not(.publication-section-grouped),
+    .publications .publication-subsection {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.85rem;
+    }
     .publications ol.bibliography li .title {
       font-size: 1rem;
     }
@@ -161,7 +186,7 @@ research_topics:
 
 <div class="publications">
   {% for topic in page.research_topics %}
-    <section class="publication-section" aria-labelledby="topic-{{ topic.id }}">
+    <section class="publication-section{% if topic.subtopics %} publication-section-grouped{% endif %}" aria-labelledby="topic-{{ topic.id }}">
       <h2 id="topic-{{ topic.id }}">{{ topic.title }}</h2>
       {% if topic.subtopics %}
         {% for subtopic in topic.subtopics %}
