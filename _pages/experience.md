@@ -26,7 +26,7 @@ nav_order: 2
     font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.5;
-    color: var(--global-text-color-light);
+    color: var(--global-theme-color);
   }
   .experience-list .experience-entry {
     display: grid;

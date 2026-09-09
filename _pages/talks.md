@@ -26,7 +26,7 @@ nav_order: 5
     font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.5;
-    color: var(--global-text-color-light);
+    color: var(--global-theme-color);
   }
   .talks-list .talk-entries {
     margin: 0;

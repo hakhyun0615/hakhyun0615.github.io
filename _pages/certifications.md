@@ -27,7 +27,7 @@ nav_order: 3
     font-size: 1.1rem;
     line-height: 1.5;
     font-weight: 500;
-    color: var(--global-text-color-light);
+    color: var(--global-theme-color);
   }
   .certifications-list .credential-list {
     margin: 0;
