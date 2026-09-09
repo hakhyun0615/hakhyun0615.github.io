@@ -26,7 +26,7 @@ research_topics:
       - id: interpretable-architectures
         title: Interpretable Architectures
       - id: interpretability-evaluation
-        title: Interpretability Evaluation
+        title: Evaluation & Validation
   - id: multi-agent
     title: Multi-Agent Systems
   - id: systems
@@ -43,8 +43,7 @@ research_topics:
   .publications .publication-section + .publication-section {
     margin-top: 2.5rem;
   }
-  .publications .publication-section,
-  .publications .publication-subsection {
+  .publications .publication-section {
     display: grid;
     grid-template-columns: 8rem minmax(0, 1fr);
     gap: 1.75rem;
@@ -53,13 +52,17 @@ research_topics:
   }
   .publications .publication-section > h2 {
     margin: 0.1rem 0 0;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 500;
     line-height: 1.5;
     color: var(--global-text-color-light);
   }
   .publications .publication-subtopics {
     min-width: 0;
+  }
+  .publications .publication-subsection {
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--global-divider-color);
   }
   .publications .publication-subsection:first-child {
     padding-top: 0;
@@ -69,7 +72,7 @@ research_topics:
     margin-top: 1.8rem;
   }
   .publications .publication-subsection > h3 {
-    margin: 0.1rem 0 0;
+    margin: 0.1rem 0 0.75rem;
     font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.5;
@@ -121,15 +124,16 @@ research_topics:
     line-height: 1.45;
   }
   .publications ol.bibliography li .author {
-    margin-top: 0.35rem;
+    margin-top: 0.3rem;
     font-size: 0.9rem;
-    line-height: 1.6;
+    font-weight: 300;
+    line-height: 1.5;
     color: var(--global-text-color-light);
   }
   .publications ol.bibliography li .periodical:not(:has(.rq)) {
     font-size: 0.85rem;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.5;
     color: var(--global-text-color-light);
   }
   .publications ol.bibliography li .periodical:not(:has(.rq)) em {
@@ -174,12 +178,6 @@ research_topics:
     opacity: 0.9;
   }
 
-  @media (max-width: 991px) {
-    .publications .publication-subsection {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 0.85rem;
-    }
-  }
   @media (max-width: 575px) {
     .publications .publication-section {
       grid-template-columns: minmax(0, 1fr);

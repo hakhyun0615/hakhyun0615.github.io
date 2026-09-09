@@ -50,13 +50,15 @@ nav_order: 2
     color: var(--global-text-color);
   }
   .experience-list .experience-role {
-    margin: 0.35rem 0 0;
+    margin: 0.3rem 0 0;
     font-size: 0.9rem;
-    line-height: 1.6;
+    font-weight: 300;
+    line-height: 1.5;
     color: var(--global-text-color-light);
   }
   .experience-list .experience-date {
     font-size: 0.82rem;
+    font-weight: 300;
     line-height: 1.5;
     white-space: nowrap;
     color: var(--global-text-color-light);

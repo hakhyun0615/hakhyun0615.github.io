@@ -24,7 +24,7 @@ nav_order: 3
   }
   .certifications-list .certification-category > h2 {
     margin: 0.1rem 0 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     font-weight: 500;
     color: var(--global-text-color-light);
@@ -59,6 +59,8 @@ nav_order: 3
   }
   .certifications-list time {
     font-size: 0.82rem;
+    font-weight: 300;
+    line-height: 1.5;
     color: var(--global-text-color-light);
     white-space: nowrap;
   }
@@ -69,6 +71,7 @@ nav_order: 3
     gap: 0.4rem 0.7rem;
     margin: 0.3rem 0 0;
     font-size: 0.9rem;
+    font-weight: 300;
     line-height: 1.5;
     color: var(--global-text-color-light);
   }

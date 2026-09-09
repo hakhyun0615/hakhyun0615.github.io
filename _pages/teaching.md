@@ -20,14 +20,14 @@ nav_order: 4
   }
   .teaching-list .teaching-institution > h2 {
     margin: 0.1rem 0 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.5;
     color: var(--global-text-color-light);
   }
   .teaching-list .teaching-term {
     font-size: 0.82rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.5;
     white-space: nowrap;
     color: var(--global-text-color-light);
