@@ -29,8 +29,22 @@ research_topics:
         title: Evaluation & Validation
   - id: multi-agent
     title: Multi-Agent Systems
+    subtopics:
+      - id: multi-agent-explainability
+        title: Explainability
+      - id: multi-agent-rl
+        title: Reinforcement Learning
+      - id: agent-spawning
+        title: Agent Spawning
   - id: systems
     title: AI Systems
+    subtopics:
+      - id: runtime-control
+        title: Runtime Control
+      - id: model-merging
+        title: Model Merging
+      - id: encrypted-inference
+        title: Encrypted Inference
   - id: applied
     title: Applied Machine Learning
 ---

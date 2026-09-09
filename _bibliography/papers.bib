@@ -6,6 +6,7 @@
   title        = {<a href="https://openreview.net/forum?id=fxSfYP7IMI">Position: Multi-Agent Explainability Needs Contracts Before Methods</a>},
   author       = {Kim, Hak Hyun and Huh, Benjamin and Vosoughi, Soroush},
   research_area = {multi-agent},
+  research_topic = {multi-agent-explainability},
   booktitle    = {International Conference on Machine Learning (ICML), Position Paper Track},
   year         = {2026},
   note         = {<details class="rq"><summary><b>Q.</b> Two papers each claim that their method explains multi-agent failures better. What has to be specified before those claims can be compared?</summary><div class="rq-answer"><b>A.</b> Two contracts, declared before any method is proposed. The Research Contract fixes what is being explained, to whom, at what intervention unit, within what evaluation bounds, under what adversarial conditions, and with what audit trail. The Agent Contract states the behavior the system was supposed to produce, as obligations, permissions, prohibitions, violation criteria, and accountability chains, which is the baseline a deviation gets explained against. Without both, a reported score is not comparable across papers and cannot be carried into a deployment decision.</div></details>}
@@ -33,6 +34,7 @@
   title       = {<a href="https://openreview.net/forum?id=D7Z4YZS0zG">CLASP: Retrofitting Cost--Latency SLO Compliance onto Any LLM Router</a>},
   author      = {Kim, Hak Hyun and Huh, Benjamin and Moon, Jimin and Lee, Chia-Wei and Peng, Jason and Marrero, Wesley J. and Vosoughi, Soroush},
   research_area = {systems},
+  research_topic = {runtime-control},
   booktitle   = {ICML 2026 Workshop on DEMO},
   note        = {<details class="rq"><summary><b>Q.</b> How can an LLM router be kept inside a cost and latency budget, without retraining it?</summary><div class="rq-answer"><b>A.</b> We introduce CLASP, a controller that sits on top of any existing router so that its choices of topology and model tier violate a per-query cost and latency budget no more often than the target allows. Offline, it reads a cost and latency cache and masks out the actions that breach the budget too often, then calibrates one penalty weight for cost and one for latency. Online, it predicts each query's cost and latency and subtracts those two weighted penalties from the router's own quality score before choosing an action. A new budget therefore costs a recomputed mask and two weights rather than a retrained router, and when the deployment drifts the weights keep updating from what actually happened.</div></details>}
 }
@@ -41,6 +43,7 @@
   title       = {<a href="https://openreview.net/forum?id=9raGR7DnlY">PolicyLLM: Neuro-Symbolic Policy Extraction and Enforcement for Runtime AI Governance</a>},
   author      = {Haider*, Syed Ali and Huh*, Benjamin and Kim*, Hak Hyun and Nalagatla*, Goutham and Guerrero Alvarez, Carlos and Raj, Yash and Vosoughi, Soroush},
   research_area = {systems},
+  research_topic = {runtime-control},
   booktitle   = {ICML 2026 Workshop on TAIGR},
   note        = {<details class="rq"><summary><b>Q.</b> How can a deployment produce a per-output record of which policies applied, what facts were checked, and what was decided?</summary><div class="rq-answer"><b>A.</b> We present PolicyLLM, which offline compiles policy documents into a decision graph and uses the Z3 SMT solver to find contradictions among the compiled rules, settling them by an explicit priority ordering. At inference time it both steers generation with policy-derived scaffolding and checks the response against that bundle, routing it to pass, auto-correct, regenerate, or escalate, and appending the decision to a hash-chained log. The solver certifies the rules it was handed, not that those rules were read correctly out of the policy documents, so a response it cannot verify goes to a human reviewer rather than to the user.</div></details>}
 }
@@ -68,6 +71,7 @@
   title       = {Scale Imbalance Drives Model Merging Degradation},
   author      = {Kim, Hak Hyun and Chin, Peter},
   research_area = {systems},
+  research_topic = {model-merging},
   journal     = {Under review at NeurIPS 2026},
   note        = {<details class="rq"><summary><b>Q.</b> Does the damage from merging two fine-tuned models come from directional conflict between their task vectors?</summary><div class="rq-answer"><b>A.</b> Not mainly. Fine-tuning the same way on different tasks leaves task-vector norms differing by up to 29x, and in that regime the log ratio of the two norms explains most of the predictable degradation while global directional coherence explains almost none. Coherence is not useless, but its effect is small enough that it only becomes visible once the differences between models, methods, and tasks are accounted for, whereas the scale effect is large enough to show through the raw numbers. Pruning methods such as DARE look coherence-dominant only at moderate imbalance, because pruning suppresses coherence while leaving the scale ratio intact. Rescaling task vectors by their norms turns the diagnostic into a fix, except for weak experts below 1B.</div></details>}
 }
@@ -150,6 +154,7 @@
   title       = {Training Cooperative LLM Agents: A Guide to Parameter Sharing in Reinforcement Learning},
   author      = {Kim, Hak Hyun and Chin, Peter},
   research_area = {multi-agent},
+  research_topic = {multi-agent-rl},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> When do shared, hybrid, or independent adapters work best in cooperative LLM multi-agent RL, and how does each design fail?</div>}
 }
@@ -158,6 +163,7 @@
   title       = {When Cooperation Fractures: Emergent Subgroups in LLM Multi-Agent Reinforcement Learning},
   author      = {Kim, Hak Hyun and Chin, Peter},
   research_area = {multi-agent},
+  research_topic = {multi-agent-rl},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Which interaction and training conditions lead cooperative LLM agents to form persistent subgroups, and when does specialization become harmful collective behavior?</div>}
 }
@@ -166,6 +172,7 @@
   title       = {When Task Decomposition and Safety Decomposition Disagree in Recursive Agent Spawning},
   author      = {Kim, Hak Hyun and Chin, Peter},
   research_area = {multi-agent},
+  research_topic = {agent-spawning},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> When agents recursively spawn subagents to solve performance-decomposable tasks, what safety-relevant information must be propagated across the spawning tree for local decisions to remain globally safe?</div>}
 }
@@ -183,6 +190,7 @@
   title       = {HELIOS: Designing Autoregressive Language Models for Fully Homomorphic Inference},
   author      = {Kim, Hak Hyun and Chin, Peter},
   research_area = {systems},
+  research_topic = {encrypted-inference},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Which language-model architectures best suppress error amplification across autoregressive generation while minimizing the computational cost of fully homomorphic inference?</div>}
 }
