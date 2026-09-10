@@ -5,8 +5,8 @@ title: publications
 description:
 nav: true
 nav_order: 1
-# Set to false to restore ICLR manuscripts to the publication list.
-hide_iclr_under_review: true
+# Set to false to restore currently hidden manuscripts to the publication list.
+hide_submissions_under_review: true
 research_topics:
   - id: interpretability-training
     title: Mechanistic Interpretability & Training Dynamics
@@ -204,8 +204,8 @@ research_topics:
 {% include bib_search.liquid %}
 
 {% assign publication_filter = "" %}
-{% if page.hide_iclr_under_review %}
-{% assign publication_filter = " && journal!~^Under review at ICLR" %}
+{% if page.hide_submissions_under_review %}
+{% assign publication_filter = " && journal!~Under review at ICLR && journal!~Under review at Nature" %}
 {% endif %}
 
 <div class="publications">
