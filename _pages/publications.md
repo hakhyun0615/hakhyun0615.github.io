@@ -5,6 +5,8 @@ title: publications
 description:
 nav: true
 nav_order: 1
+# Set to false to restore ICLR manuscripts to the publication list.
+hide_iclr_under_review: true
 research_topics:
   - id: interpretability-training
     title: Mechanistic Interpretability & Training Dynamics
@@ -201,22 +203,35 @@ research_topics:
 
 {% include bib_search.liquid %}
 
+{% assign publication_filter = "" %}
+{% if page.hide_iclr_under_review %}
+{% assign publication_filter = " && journal!~^Under review at ICLR" %}
+{% endif %}
+
 <div class="publications">
   {% for topic in page.research_topics %}
-    <section class="publication-section{% if topic.subtopics %} publication-section-grouped{% endif %}" aria-labelledby="topic-{{ topic.id }}">
-      <h2 id="topic-{{ topic.id }}">{{ topic.title }}</h2>
-      {% if topic.subtopics %}
-        <div class="publication-subtopics">
-          {% for subtopic in topic.subtopics %}
-            <section class="publication-subsection" aria-labelledby="topic-{{ topic.id }}-{{ subtopic.id }}">
-              <h3 id="topic-{{ topic.id }}-{{ subtopic.id }}">{{ subtopic.title }}</h3>
-              {% bibliography --query @*[research_topic={{subtopic.id}}] %}
-            </section>
-          {% endfor %}
-        </div>
-      {% else %}
-        {% bibliography --query @*[research_area={{topic.id}}] %}
-      {% endif %}
-    </section>
+    {% capture topic_count %}{% bibliography_count --query @*[research_area={{topic.id}}{{publication_filter}}] %}{% endcapture %}
+    {% assign topic_count = topic_count | plus: 0 %}
+    {% if topic_count > 0 %}
+      <section class="publication-section{% if topic.subtopics %} publication-section-grouped{% endif %}" aria-labelledby="topic-{{ topic.id }}">
+        <h2 id="topic-{{ topic.id }}">{{ topic.title }}</h2>
+        {% if topic.subtopics %}
+          <div class="publication-subtopics">
+            {% for subtopic in topic.subtopics %}
+              {% capture subtopic_count %}{% bibliography_count --query @*[research_topic={{subtopic.id}}{{publication_filter}}] %}{% endcapture %}
+              {% assign subtopic_count = subtopic_count | plus: 0 %}
+              {% if subtopic_count > 0 %}
+                <section class="publication-subsection" aria-labelledby="topic-{{ topic.id }}-{{ subtopic.id }}">
+                  <h3 id="topic-{{ topic.id }}-{{ subtopic.id }}">{{ subtopic.title }}</h3>
+                  {% bibliography --query @*[research_topic={{subtopic.id}}{{publication_filter}}] %}
+                </section>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% else %}
+          {% bibliography --query @*[research_area={{topic.id}}{{publication_filter}}] %}
+        {% endif %}
+      </section>
+    {% endif %}
   {% endfor %}
 </div>
