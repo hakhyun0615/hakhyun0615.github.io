@@ -122,7 +122,7 @@ nav_order: 2
       <article class="experience-entry" aria-labelledby="experience-wonbuilding">
         <div>
           <h3 class="experience-title" id="experience-wonbuilding">Wonbuilding Real Estate Consulting</h3>
-          <p class="experience-role">Technical Product Manager (TPM) &amp; Lead Software Engineer · Seoul, South Korea</p>
+          <p class="experience-role">Technical Product Manager &amp; Lead Software Engineer · Seoul, South Korea</p>
         </div>
         <span class="experience-date"><time datetime="2023-04">Apr 2023</time> – <time datetime="2024-12">Dec 2024</time></span>
       </article>
