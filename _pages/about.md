@@ -71,6 +71,6 @@ I am an M.S. student in Computer Science at Dartmouth College, advised by [Sorou
 
 My research focuses on **AI safety**. I combine controlled experiments and mathematical analysis to study how internal representations shape behavior and to evaluate the reliability of AI systems.
 
-My research spans mechanistic interpretability, training dynamics and generalization, multilingual and multimodal AI, model merging, world models, situational awareness, AI systems, and multi-agent systems. (See [Publications]({{ '/publications/' | relative_url }}) for research questions.)
+My research spans mechanistic interpretability, training dynamics and generalization, multilingual and multimodal AI, model merging, world models, situational awareness, AI systems, and multi-agent systems. (Click a research question in [Publications]({{ '/publications/' | relative_url }}) to see the answer.)
 
 **My goal is to design AI models that circumvent the need for post-hoc reverse-engineering and post-training alignment interventions. My research investigates how to construct inherently interpretable architectures with legible world models, and how pretraining paradigms dictate the internal computations that naturally drive aligned behavior.**
