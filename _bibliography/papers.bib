@@ -67,15 +67,6 @@
   note        = {<details class="rq"><summary><b>Q.</b> What does apartment price prediction gain from scaling the dataset and searching for variables systematically?</summary><div class="rq-answer"><b>A.</b> We assemble 878,928 Seoul transactions from 2015 to 2020 with 42 variables, where earlier studies used a few thousand records and chose their variables by hand. After clearing multicollinearity we compare five variable selection methods against four models. Tested on 2021, the predicted map of expensive complexes matches the real one almost exactly, but the predicted prices come out too low across the board.</div></details>}
 }
 
-@article{kim2026merging,
-  title       = {Scale Imbalance Drives Model Merging Degradation},
-  author      = {Kim, Hak Hyun and Chin, Peter},
-  research_area = {systems},
-  research_topic = {model-merging},
-  journal     = {Under review at NeurIPS 2026},
-  note        = {<details class="rq"><summary><b>Q.</b> Does the damage from merging two fine-tuned models come from directional conflict between their task vectors?</summary><div class="rq-answer"><b>A.</b> Not mainly. Fine-tuning the same way on different tasks leaves task-vector norms differing by up to 29x, and in that regime the log ratio of the two norms explains most of the predictable degradation while global directional coherence explains almost none. Coherence is not useless, but its effect is small enough that it only becomes visible once the differences between models, methods, and tasks are accounted for, whereas the scale effect is large enough to show through the raw numbers. Pruning methods such as DARE look coherence-dominant only at moderate imbalance, because pruning suppresses coherence while leaving the scale ratio intact. Rescaling task vectors by their norms turns the diagnostic into a fix, except for weak experts below 1B.</div></details>}
-}
-
 @inproceedings{kim2026emergence,
   title       = {Inside Emergence: Structure-Behaviour Gaps in Language Model Training},
   author      = {Kim, Hak Hyun and Raj, Yash and Vosoughi, Soroush},
@@ -113,7 +104,7 @@
   research_area = {interpretability-training},
   research_topic = {interventions},
   journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> If a model can still represent a dialogue constraint, can steering reliably restore compliance?</summary><div class="rq-answer"><b>A.</b> Constraints remain decodable before many checker failures, but decodability does not establish functional use. CAV and attention steering each improve some outcomes, while combining them can both gain and lose successes. The results concern an exploratory checker-based protocol; they do not establish a natural failure mechanism or semantic answer quality.</div></details>}
+  note        = {<details class="rq"><summary><b>Q.</b> Can a failed dialogue constraint remain decodable, and do individually useful steering methods work better together?</summary><div class="rq-answer"><b>A.</b> Across four models and 230 twenty-turn sessions, probes recover constraint identity before many checker-failed answers. That establishes decodable information while the instruction remains in context, not functional use. At unit strength, combined CAV and attention steering improves checker pass rates by 21.7–29.8 percentage points over baseline and beats either alone, but its gains are subadditive. Across the full joint grid, adding CAV to attention loses more successes than it gains in 24 of 36 comparisons. These are exploratory policy comparisons with imperfect checks and independently generated histories; they do not identify the natural cause of compliance decay.</div></details>}
 }
 
 @article{kim2027geotrace,
@@ -153,7 +144,7 @@
   research_area = {interpretability-training},
   research_topic = {world-models},
   journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> Does more accurate internal world knowledge make a policy better at acting?</summary><div class="rq-answer"><b>A.</b> In Sokoban Transformers, supervising state, action effects, and goal occupancy greatly improves complete-state recovery without improving standard held-out puzzle solving. It helps with supplied detour histories, but more training reduces that advantage. Recoverable state information must therefore be tested against the decisions and continuations it is meant to support.</div></details>}
+  note        = {<details class="rq"><summary><b>Q.</b> Does more accurate internal world knowledge make a policy better at acting?</summary><div class="rq-answer"><b>A.</b> In a controlled 7-by-7 Sokoban setting, eight supervision conditions share a 50.5M-parameter Transformer and action-training corpus. Across three seeds, supervising state, action effects, and goal occupancy raises complete-state recovery from 20.8% to 95.5%, while held-out 32–60-step puzzle solving changes from 74.5% to 73.5%. Supervision helps continuation after supplied detours, but doubling training shrinks that advantage on matched handovers. This separates recoverable state information from its behavioral utility; it does not show that world knowledge is unnecessary or establish the mechanism behind the supervision benefit.</div></details>}
 }
 
 @article{kim2027publicstate,
@@ -231,7 +222,7 @@
   research_area = {interpretability-training},
   research_topic = {multimodal-alignment},
   journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> Can separately trained image-text and audio-text connectors support useful image-audio retrieval?</summary><div class="rq-answer"><b>A.</b> They produce an above-chance signal without matched image-audio pairs in connector training, but the best result on the noisy AudioCaps thumbnail proxy remains too weak for practical search. Data quality and the audio encoder strongly affect performance, and changing the text model does not close the gap to a directly trained system.</div></details>}
+  note        = {<details class="rq"><summary><b>Q.</b> Can separately trained image-text and audio-text connectors support useful image-audio retrieval?</summary><div class="rq-answer"><b>A.</b> The staged connectors produce an above-chance matching signal without image-audio pairs in their own training. On the 4,411-row AudioCaps thumbnail proxy, mean recall reaches 4.13%, versus 0.121% chance. The signal remains weak, varies with the data source and audio encoder, and does not consistently improve when the text model changes. The gallery contains noisy thumbnails and repeated video IDs, and the study has no randomized text-anchor control. It therefore demonstrates a limited retrieval result, not that text itself caused the alignment or that the system is ready for practical search.</div></details>}
 }
 
 @article{raj2027personas,
@@ -240,7 +231,7 @@
   research_area = {interpretability-training},
   research_topic = {interventions},
   journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> Can language-model personas be decomposed into a small set of causally active personality traits?</summary><div class="rq-answer"><b>A.</b> Sparse mixtures drawn from 60 traits capture roughly half of a persona activation direction. Adding or removing these mixtures changes persona recognition, and related trait interventions affect sycophancy and refusal. The mixtures therefore capture a causally active part of persona behavior, rather than a complete description of each persona.</div></details>}
+  note        = {<details class="rq"><summary><b>Q.</b> How much of a language-model persona can a small trait mixture explain, and does that mixture affect behavior?</summary><div class="rq-answer"><b>A.</b> Across 37 personas and three models, mixtures from a 60-trait dictionary use a median of six traits and capture roughly half the persona direction’s length. Adding and removing these mixtures changes recognition more than matched random edits; related mixtures also affect sycophancy and refusal. Broad persona resemblance is easier to recover than distinctions between similar characters. Because the trait dictionary is correlated and linearly dependent, these recipes are not uniquely identified psychological primitives, and the joint interventions do not isolate each trait’s causal contribution.</div></details>}
 }
 
 @article{kim2027whichtask,
@@ -249,7 +240,7 @@
   research_area = {systems},
   research_topic = {model-merging},
   journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> Which task suffers most when fine-tuned models are merged, and can that damage be reduced?</summary><div class="rq-answer"><b>A.</b> Two-sided capacity bounds connect interference energy and curvature to task loss. Across the tested merges, the smaller task-vector norm usually predicts greater damage, and matching training exposure removes much of this ordering signal. Shrinking the larger vector protects the smaller task in targeted tests; equalizing norms at fixed total norm can instead make damage worse.</div></details>}
+  note        = {<details class="rq"><summary><b>Q.</b> Which task suffers most when fine-tuned models are merged, and can that damage be reduced?</summary><div class="rq-answer"><b>A.</b> Under explicit curvature and stationarity assumptions, two-sided loss bounds predict when the smaller task vector’s task suffers more. GLUE experiments support this ordering under unequal training exposure, while matching exposure compresses norm differences and removes reliable norm-based ordering. On four tested pairs in two model families, shrinking only the larger vector protects the smaller task better than uniform scaling; equalizing at fixed total norm can instead stretch the smaller vector and harm both tasks. Shrinkage can cost the larger task, and the bounds are conditional rather than certified capacity limits for real networks.</div></details>}
 }
 
 @article{huh2027morphsae,
@@ -258,7 +249,7 @@
   research_area = {interpretability-training},
   research_topic = {sparse-autoencoders},
   journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> Does reserving sparse features for separate dictionaries automatically recover meaningful components?</summary><div class="rq-answer"><b>A.</b> No. MorphSAE assigns each dictionary its own TopK budget, but reserved slots alone do not reliably improve reconstruction or unsupervised specialization on natural activations. An explicit separator signal enables useful decomposition in a controlled synthetic task; a matched shared-budget model performs similarly, so the quota itself does not explain that success.</div></details>}
+  note        = {<details class="rq"><summary><b>Q.</b> Does reserving sparse slots for separate dictionaries automatically recover meaningful components?</summary><div class="rq-answer"><b>A.</b> No. MorphSAE gives each named dictionary a TopK quota, guaranteeing returned indices rather than positive activations or semantic ownership. The optional cross-dictionary loss reduces its sampled overlap statistic, but quota-only comparisons show no reliable reconstruction advantage, and none of the 12 unsupervised evaluations passes the full functional criterion. A supervised synthetic copy task does yield useful named components, yet a named model with one shared budget performs similarly. The positive result supports that supervised decomposition recipe; it does not attribute the benefit to reserved slots or establish automatic component recovery.</div></details>}
 }
 
 @article{kim2027repairs,
@@ -267,7 +258,7 @@
   research_area = {interpretability-training},
   research_topic = {vision-language},
   journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> Does a wrong answer identify one defective module in a vision-language model?</summary><div class="rq-answer"><b>A.</b> No. Fine-tuning every subset of a vision encoder, projector, and language model shows that many geometric-reasoning errors admit multiple single-module repairs. Joint training mostly reorganizes existing repairs. Detailed causal analysis also separates where parameters adapt from where a repair is computed: different adaptation routes can converge on the same late decision state.</div></details>}
+  note        = {<details class="rq"><summary><b>Q.</b> Does one wrong answer identify one defective module or one place to repair a vision-language model?</summary><div class="rq-answer"><b>A.</b> Not in the tested LLaVA-OneVision-0.5B setting. Training all seven non-empty subsets of the vision encoder, projector, and language model on 13 geometry tasks gives multiple single-module repairs for about 44–45% of Base errors across two seeds. Joint training mostly reallocates existing repairs. On the G02 case studied in depth, vision-only and language-only adaptation use different causal routes that meet at one late decision state. Where parameters change, where the repair is computed, and which module carries it can therefore differ. Repair availability remains specific to the model, training recipe, and answer-scoring protocol.</div></details>}
 }
 
 @article{huh2027nfsae,
@@ -276,7 +267,7 @@
   research_area = {interpretability-training},
   research_topic = {sparse-autoencoders},
   journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> Do nonnegative feature strengths consistently improve sparse autoencoders across language models?</summary><div class="rq-answer"><b>A.</b> No consistent advantage appears across the tested models. NF-SAE looks promising on Gemma, but that result does not carry over to Pythia or Qwen, and BatchTopK has lower mean reconstruction and output errors wherever tested. The study highlights the need for matched controls across models before treating one-model success as a general improvement.</div></details>}
+  note        = {<details class="rq"><summary><b>Q.</b> Does an NMF-inspired sparse autoencoder provide a reliable advantage across language models?</summary><div class="rq-answer"><b>A.</b> NF-SAE constrains its main feature strengths to be nonnegative while retaining signed feature directions and a smaller signed correction branch. In one layer each of Gemma, Pythia, and Qwen, its favorable Gemma results do not transfer consistently; BatchTopK has lower mean reconstruction and output errors on Gemma and Pythia wherever compared. Parameters, compute, relative width, and training choices are not fully matched, and many features remain inactive on evaluation packets. The evidence evaluates a complete recipe, without isolating nonnegativity as the cause or establishing better interpretability.</div></details>}
 }
 
 @article{moody2027safestgraph,
@@ -285,5 +276,5 @@
   research_area = {multi-agent},
   research_topic = {adversarial-robustness},
   journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> Can local interaction measurements predict which communication graphs resist adversarial capture?</summary><div class="rq-answer"><b>A.</b> A question-specific switching model predicts how often an adversary converts a group majority across unseen graph configurations. Graph rankings transfer better than absolute capture probabilities. Concentrating links on one agent is consistently poor in the tested setting, while the best graph depends on the initial answer distribution and how strongly agents follow the majority.</div></details>}
+  note        = {<details class="rq"><summary><b>Q.</b> Can local interactions predict adversarial capture, and is one communication graph always safest?</summary><div class="rq-answer"><b>A.</b> A question-specific switching model calibrated on eight graph–adversary configurations predicts capture on 52 other configurations with mean error 0.012 in the tested six-agent setup. Graph rankings transfer better than absolute capture probabilities, which need recalibration under new questions or attacks. When the adversary chooses its worst-case position, concentrating links on one agent is especially risky; with random placement, rankings can reverse. The most accurate topology also depends on the initial answer distribution and agents’ majority-following behavior. The study thus supports conditional topology selection, not a universally safest graph.</div></details>}
 }
