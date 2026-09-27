@@ -5,8 +5,8 @@ title: publications
 description:
 nav: true
 nav_order: 1
-# Set to false to restore currently hidden manuscripts to the publication list.
-hide_submissions_under_review: true
+# Keep manuscripts absent from the current submission list and the Nature manuscript hidden.
+hide_unlisted_manuscripts: true
 research_topics:
   - id: interpretability-training
     title: Mechanistic Interpretability & Training Dynamics
@@ -21,6 +21,8 @@ research_topics:
         title: Training Dynamics
       - id: vision-language
         title: Vision–Language Models
+      - id: multimodal-alignment
+        title: Cross-Modal Alignment
       - id: world-models
         title: World Models
       - id: situational-awareness
@@ -36,6 +38,8 @@ research_topics:
         title: Explainability
       - id: multi-agent-rl
         title: Reinforcement Learning
+      - id: adversarial-robustness
+        title: Adversarial Robustness
       - id: agent-spawning
         title: Agent Spawning
   - id: systems
@@ -204,8 +208,8 @@ research_topics:
 {% include bib_search.liquid %}
 
 {% assign publication_filter = "" %}
-{% if page.hide_submissions_under_review %}
-{% assign publication_filter = " && journal!~Under review at ICLR && journal!~Under review at Nature" %}
+{% if page.hide_unlisted_manuscripts %}
+{% assign publication_filter = " && website_hidden!~true && journal!~Under review at Nature" %}
 {% endif %}
 
 <div class="publications">
