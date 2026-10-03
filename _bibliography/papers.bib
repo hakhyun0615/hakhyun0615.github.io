@@ -15,7 +15,7 @@
 @inproceedings{kim2026translation,
   title       = {<a href="https://aclanthology.org/2026.stereacult-1.11/">Translation Is Not Representation: English-Hub Routing in Cross-Lingual Bias Benchmarks</a>},
   author      = {Kim, Hak Hyun and Huh, Benjamin},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {multilingual},
   booktitle   = {ACL 2026 Workshop on StereACuLT},
   note        = {<details class="rq"><summary><b>Q.</b> Are the representations underlying cross-lingual bias benchmark scores language-agnostic?</summary><div class="rq-answer"><b>A.</b> Not necessarily. We compare English bias questions with their Japanese translations across English-centric, Japanese-adapted, and balanced bilingual models. CKA finds strong geometric alignment between the languages in every model. But a multi-anchor logit lens shows that internal language preferences vary with training history despite this similarity, with English-hub signals weakening after Japanese adaptation and under balanced bilingual training. Even with high CKA, cross-lingual bias scores describe language-specific stereotype preferences without establishing language-agnostic representations of bias.</div></details>}
@@ -24,7 +24,7 @@
 @inproceedings{huh2026easy,
   title       = {Easy to Add, Hard to Erase: Causal Evidence on Stereotype Editing in LLMs},
   author      = {Huh, Benjamin and Kim, Hak Hyun and Peng, Jason},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {interventions},
   booktitle   = {ACL 2026 Workshop on StereACuLT},
   note        = {<details class="rq"><summary><b>Q.</b> If a stereotype is carried by a linear direction in the residual stream, does erasing that direction stop the behavior?</summary><div class="rq-answer"><b>A.</b> No. We build the direction from the gap between a stereotype item and its anti-stereotype twin, measured at the word where the two actually differ, then at the decision token either add that direction back or project it out, and compare the two edits on the same items. Adding it moves the model toward the stereotype; projecting it out shifts confidence without flipping many decisions, because most items sit far from the boundary. Component rankings do not rescue this: their predicted signs are not reliable enough to edit by, and between one in seven and one in four of the top-ranked components push against the intended edit. Finding the direction earns a control knob, not a fix.</div></details>}
@@ -70,7 +70,7 @@
 @inproceedings{kim2026emergence,
   title       = {Inside Emergence: Structure-Behaviour Gaps in Language Model Training},
   author      = {Kim, Hak Hyun and Raj, Yash and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {training-dynamics},
   research_topic = {training-dynamics},
   booktitle   = {NeurIPS},
   year        = {2026},
@@ -81,7 +81,7 @@
   selected    = {true},
   title       = {A Curvature Phase Transition Governs Coherence Penalty Efficiency Against Feature Absorption in SAEs},
   author      = {Kim, Hak Hyun and Raj, Yash and Chin, Peter and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {sparse-autoencoders},
   booktitle   = {NeurIPS},
   year        = {2026},
@@ -91,7 +91,7 @@
 @inproceedings{huh2026positional,
   title       = {The Missing Positional Story in LLMs: A Case Study of Shift-Invariant Attention},
   author      = {Huh, Benjamin and Kim, Hak Hyun and Tian, Yuting and Peng, Jason and Kang, Christopher and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {interventions},
   booktitle   = {NeurIPS},
   year        = {2026},
@@ -101,7 +101,7 @@
 @article{kim2026knowing,
   title       = {<a href="https://openreview.net/forum?id=ScI9VVegt4">Probing and Steering Constraint Following in Multi-Turn Dialogue</a>},
   author      = {Kim, Hak Hyun and Huh, Benjamin and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {interventions},
   journal     = {Under review at ICLR 2027},
   note        = {<details class="rq"><summary><b>Q.</b> Can a failed dialogue constraint remain decodable, and do individually useful steering methods work better together?</summary><div class="rq-answer"><b>A.</b> Across four models and 230 twenty-turn sessions, probes recover constraint identity before many checker-failed answers. That establishes decodable information while the instruction remains in context, not functional use. At unit strength, combined CAV and attention steering improves checker pass rates by 21.7–29.8 percentage points over baseline and beats either alone, but its gains are subadditive. Across the full joint grid, adding CAV to attention loses more successes than it gains in 24 of 36 comparisons. These are exploratory policy comparisons with imperfect checks and independently generated histories; they do not identify the natural cause of compliance decay.</div></details>}
@@ -111,7 +111,7 @@
   website_hidden = {true},
   title       = {GeoTrace: Causal Trajectories of Object-Bound Geometry in Vision--Language Models},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {vision-language},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Where does the causal path from object-bound geometry to a VLM’s final judgment break down?</div>}
@@ -121,7 +121,7 @@
   website_hidden = {true},
   title       = {How Neural Computation Organizes During Transformer Training},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {training-dynamics},
   research_topic = {training-dynamics},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Can we predict and control the emergence of higher-level causal organization during transformer training?</div>}
@@ -132,7 +132,7 @@
   website_hidden = {true},
   title       = {Self-Location as a Missing Link in LLM Situational Awareness},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {situational-awareness},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Does a distinct self-location representation determine whether situational information guides an LLM's behavior?</div>}
@@ -141,7 +141,7 @@
 @article{kim2027worldmodel,
   title       = {<a href="https://openreview.net/forum?id=2nCo30upJb">How a World Model Forms: Separating World Knowledge from Behavioral Competence in Sokoban Transformers</a>},
   author      = {Kim, Hak Hyun and Raj, Yash and Vosoughi, Soroush and Chin, Peter},
-  research_area = {interpretability-training},
+  research_area = {training-dynamics},
   research_topic = {world-models},
   journal     = {Under review at ICLR 2027},
   note        = {<details class="rq"><summary><b>Q.</b> Does more accurate internal world knowledge make a policy better at acting?</summary><div class="rq-answer"><b>A.</b> In a controlled 7-by-7 Sokoban setting, eight supervision conditions share a 50.5M-parameter Transformer and action-training corpus. Across three seeds, supervising state, action effects, and goal occupancy raises complete-state recovery from 20.8% to 95.5%, while held-out 32–60-step puzzle solving changes from 74.5% to 73.5%. Supervision helps continuation after supplied detours, but doubling training shrinks that advantage on matched handovers. This separates recoverable state information from its behavioral utility; it does not show that world knowledge is unnecessary or establish the mechanism behind the supervision benefit.</div></details>}
@@ -151,7 +151,7 @@
   website_hidden = {true},
   title       = {Architecting Language Models for Observable Reasoning},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {interpretable-architectures},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> Can language-model inference be organized around a human-legible public computational state sufficient for subsequent reasoning without chain-of-thought?</div>}
@@ -191,7 +191,7 @@
   website_hidden = {true},
   title       = {How Minority-Language Capabilities Form in English-Dominant Pretraining?},
   author      = {Kim, Hak Hyun and Chin, Peter and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {training-dynamics},
   research_topic = {multilingual},
   journal     = {Under review at ICLR 2027},
   note        = {<div class="rq"><b>Q.</b> How does English learning causally shape the formation, sharing, specialization, and reorganization of minority-language representations and computations during English-dominant multilingual pretraining?</div>}
@@ -210,7 +210,7 @@
 @article{kimevidence,
   title       = {The Evidence Behind Claims of Understanding and Controlling Neural Networks},
   author      = {Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {interpretability-evaluation},
   journal     = {Under review at Nature},
   note        = {<div class="rq"><b>Q.</b> How far does current evaluation evidence justify claims of understanding and controlling neural networks, and how can the identified limitations be addressed?</div>}
@@ -219,7 +219,7 @@
 @article{huh2027textbridge,
   title       = {<a href="https://openreview.net/forum?id=iul5gUdau1">Can Text Connect Images and Audio Without Paired Training Data? A Controlled Study</a>},
   author      = {Huh, Benjamin and Kim, Hak Hyun and Raj, Yash and Peng, Jason},
-  research_area = {interpretability-training},
+  research_area = {training-dynamics},
   research_topic = {multimodal-alignment},
   journal     = {Under review at ICLR 2027},
   note        = {<details class="rq"><summary><b>Q.</b> Can separately trained image-text and audio-text connectors support useful image-audio retrieval?</summary><div class="rq-answer"><b>A.</b> The staged connectors produce an above-chance matching signal without image-audio pairs in their own training. On the 4,411-row AudioCaps thumbnail proxy, mean recall reaches 4.13%, versus 0.121% chance. The signal remains weak, varies with the data source and audio encoder, and does not consistently improve when the text model changes. The gallery contains noisy thumbnails and repeated video IDs, and the study has no randomized text-anchor control. It therefore demonstrates a limited retrieval result, not that text itself caused the alignment or that the system is ready for practical search.</div></details>}
@@ -228,7 +228,7 @@
 @article{raj2027personas,
   title       = {<a href="https://openreview.net/forum?id=BRQIInJFXI">The Trait Structure of Language Model Personas</a>},
   author      = {Raj, Yash and Kim, Hak Hyun and Huh, Benjamin and Tian, Yuting and Shapira, Natalie and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {interventions},
   journal     = {Under review at ICLR 2027},
   note        = {<details class="rq"><summary><b>Q.</b> How much of a language-model persona can a small trait mixture explain, and does that mixture affect behavior?</summary><div class="rq-answer"><b>A.</b> Across 37 personas and three models, mixtures from a 60-trait dictionary use a median of six traits and capture roughly half the persona direction’s length. Adding and removing these mixtures changes recognition more than matched random edits; related mixtures also affect sycophancy and refusal. Broad persona resemblance is easier to recover than distinctions between similar characters. Because the trait dictionary is correlated and linearly dependent, these recipes are not uniquely identified psychological primitives, and the joint interventions do not isolate each trait’s causal contribution.</div></details>}
@@ -246,7 +246,7 @@
 @article{huh2027morphsae,
   title       = {<a href="https://openreview.net/forum?id=q0QR1ze7vR">MorphSAE: Reserved Sparse Slots without Automatic Component Recovery</a>},
   author      = {Huh, Benjamin and Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {sparse-autoencoders},
   journal     = {Under review at ICLR 2027},
   note        = {<details class="rq"><summary><b>Q.</b> Does reserving sparse slots for separate dictionaries automatically recover meaningful components?</summary><div class="rq-answer"><b>A.</b> No. MorphSAE gives each named dictionary a TopK quota, guaranteeing returned indices rather than positive activations or semantic ownership. The optional cross-dictionary loss reduces its sampled overlap statistic, but quota-only comparisons show no reliable reconstruction advantage, and none of the 12 unsupervised evaluations passes the full functional criterion. A supervised synthetic copy task does yield useful named components, yet a named model with one shared budget performs similarly. The positive result supports that supervised decomposition recipe; it does not attribute the benefit to reserved slots or establish automatic component recovery.</div></details>}
@@ -255,7 +255,7 @@
 @article{kim2027repairs,
   title       = {<a href="https://openreview.net/forum?id=IDUumDpisu">One Failure, Many Repairs: Module-Level Repair Spaces in Vision–Language Models</a>},
   author      = {Kim, Hak Hyun and Chin, Peter and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {vision-language},
   journal     = {Under review at ICLR 2027},
   note        = {<details class="rq"><summary><b>Q.</b> Does one wrong answer identify one defective module or one place to repair a vision-language model?</summary><div class="rq-answer"><b>A.</b> Not in the tested LLaVA-OneVision-0.5B setting. Training all seven non-empty subsets of the vision encoder, projector, and language model on 13 geometry tasks gives multiple single-module repairs for about 44–45% of Base errors across two seeds. Joint training mostly reallocates existing repairs. On the G02 case studied in depth, vision-only and language-only adaptation use different causal routes that meet at one late decision state. Where parameters change, where the repair is computed, and which module carries it can therefore differ. Repair availability remains specific to the model, training recipe, and answer-scoring protocol.</div></details>}
@@ -264,7 +264,7 @@
 @article{huh2027nfsae,
   title       = {<a href="https://openreview.net/forum?id=sbvkcVAWS9">NF-SAE: Testing an NMF-Inspired Sparse Autoencoder Across Language Models</a>},
   author      = {Huh, Benjamin and Peng, Jason and Kim, Hak Hyun and Vosoughi, Soroush},
-  research_area = {interpretability-training},
+  research_area = {interpretability},
   research_topic = {sparse-autoencoders},
   journal     = {Under review at ICLR 2027},
   note        = {<details class="rq"><summary><b>Q.</b> Does an NMF-inspired sparse autoencoder provide a reliable advantage across language models?</summary><div class="rq-answer"><b>A.</b> NF-SAE constrains its main feature strengths to be nonnegative while retaining signed feature directions and a smaller signed correction branch. In one layer each of Gemma, Pythia, and Qwen, its favorable Gemma results do not transfer consistently; BatchTopK has lower mean reconstruction and output errors on Gemma and Pythia wherever compared. Parameters, compute, relative width, and training choices are not fully matched, and many features remain inactive on evaluation packets. The evidence evaluates a complete recipe, without isolating nonnegativity as the cause or establishing better interpretability.</div></details>}

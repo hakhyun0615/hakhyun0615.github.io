@@ -8,49 +8,14 @@ nav_order: 1
 # Keep manuscripts absent from the current submission list and the Nature manuscript hidden.
 hide_unlisted_manuscripts: true
 research_topics:
-  - id: interpretability-training
-    title: Mechanistic Interpretability & Training Dynamics
-    subtopics:
-      - id: sparse-autoencoders
-        title: Sparse Autoencoders
-      - id: multilingual
-        title: Multilingual Models
-      - id: interventions
-        title: Model Interventions
-      - id: training-dynamics
-        title: Training Dynamics
-      - id: vision-language
-        title: Vision–Language Models
-      - id: multimodal-alignment
-        title: Cross-Modal Alignment
-      - id: world-models
-        title: World Models
-      - id: situational-awareness
-        title: Situational Awareness
-      - id: interpretable-architectures
-        title: Interpretable Architectures
-      - id: interpretability-evaluation
-        title: Evaluation & Validation
+  - id: interpretability
+    title: Mechanistic Interpretability
+  - id: training-dynamics
+    title: Training Dynamics
   - id: multi-agent
     title: Multi-Agent Systems
-    subtopics:
-      - id: multi-agent-explainability
-        title: Explainability
-      - id: multi-agent-rl
-        title: Reinforcement Learning
-      - id: adversarial-robustness
-        title: Adversarial Robustness
-      - id: agent-spawning
-        title: Agent Spawning
   - id: systems
     title: AI Systems
-    subtopics:
-      - id: runtime-control
-        title: Runtime Control
-      - id: model-merging
-        title: Model Merging
-      - id: encrypted-inference
-        title: Encrypted Inference
   - id: applied
     title: Applied Machine Learning
 ---
