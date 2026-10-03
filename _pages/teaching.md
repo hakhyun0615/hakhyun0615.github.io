@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description:
 nav: true
-nav_order: 4
+nav_order: 3
 ---
 
 <style>
@@ -18,12 +18,18 @@ nav_order: 4
     padding-top: 1.1rem;
     border-top: 1px solid var(--global-divider-color);
   }
-  .teaching-list .teaching-institution > h2 {
+  .teaching-list .teaching-institution h2 {
     margin: 0.1rem 0 0;
     font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.5;
     color: var(--global-theme-color);
+  }
+  .teaching-list .teaching-role {
+    margin: 0.4rem 0 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--global-text-color-light);
   }
   .teaching-list .teaching-term {
     font-size: 0.82rem;
@@ -74,7 +80,10 @@ nav_order: 4
 
 <div class="teaching-list">
   <section class="teaching-institution" aria-labelledby="teaching-dartmouth">
-    <h2 id="teaching-dartmouth">Dartmouth College</h2>
+    <div>
+      <h2 id="teaching-dartmouth">Dartmouth College</h2>
+      <p class="teaching-role">Teaching Assistant</p>
+    </div>
     <ul class="teaching-courses" aria-label="Courses">
       <li>
         <span>Applied Computer Science</span>

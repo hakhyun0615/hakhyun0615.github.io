@@ -143,12 +143,33 @@ research_topics:
   }
 
   .publications ol.bibliography li .rq > summary {
+    position: relative;
+    padding-right: 1.4rem;
     cursor: pointer;
     color: var(--global-text-color);
     list-style: none;
   }
   .publications ol.bibliography li .rq > summary::-webkit-details-marker {
     display: none;
+  }
+  .publications ol.bibliography li .rq > summary::after {
+    content: "";
+    position: absolute;
+    top: 0.45rem;
+    right: 0.15rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(-45deg);
+  }
+  .publications ol.bibliography li .rq[open] > summary::after {
+    transform: rotate(45deg);
+  }
+  .publications ol.bibliography li .rq > summary:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 4px;
+    border-radius: 2px;
   }
 
   .publications ol.bibliography li .rq > .rq-answer {

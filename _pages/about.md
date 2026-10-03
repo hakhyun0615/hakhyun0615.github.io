@@ -69,8 +69,8 @@ latest_posts:
 
 I am an M.S. student in Computer Science at Dartmouth College, advised by [Soroush Vosoughi](https://www.cs.dartmouth.edu/~soroush/) and [Peter Chin](https://sites.dartmouth.edu/lisplab/). Before Dartmouth, I received my B.S. in Electronic and Electrical Engineering from Sungkyunkwan University, where I was advised by [Hayoung Oh](https://sites.google.com/site/hyoh79/).
 
-My research focuses on **AI safety**. I combine controlled experiments and mathematical analysis to study how internal representations shape behavior and to evaluate the reliability of AI systems.
+My research focuses on **AI safety**: when do internal representations predict behavior, when do interventions provide reliable control, and how do these relationships change during training?
 
-My research spans mechanistic interpretability, training dynamics and generalization, multilingual and multimodal AI, model merging, world models, situational awareness, AI systems, and multi-agent systems. (Click a research question in [Publications]({{ '/publications/' | relative_url }}) to see the answer.)
+I combine controlled experiments and mathematical analysis to investigate these questions in language, multimodal, and multi-agent systems. My work connects mechanistic interpretability and training dynamics with the practical reliability of AI systems. Each paper in [Publications]({{ '/publications/' | relative_url }}) includes an expandable research question and answer.
 
-**My goal is to design AI models that circumvent the need for post-hoc reverse-engineering and post-training alignment interventions. My research investigates how to construct inherently interpretable architectures with legible world models, and how pretraining paradigms dictate the internal computations that naturally drive aligned behavior.**
+**My long-term goal is to build interpretable architectures with legible world models, and to understand how training can produce reliable behavior with less reliance on post-hoc interventions.**

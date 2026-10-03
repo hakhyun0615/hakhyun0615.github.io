@@ -63,6 +63,11 @@ nav_order: 2
     white-space: nowrap;
     color: var(--global-text-color-light);
   }
+  .experience-list .experience-description {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
   @media (max-width: 575px) {
     .experience-list .experience-section {
       grid-template-columns: minmax(0, 1fr);
@@ -90,6 +95,7 @@ nav_order: 2
         <div>
           <h3 class="experience-title" id="experience-iliad">Iliad Intensive</h3>
           <p class="experience-role">Berkeley, California</p>
+          <p class="experience-description">Completed a three-week residential intensive on theoretical AI alignment.</p>
         </div>
         <time class="experience-date" datetime="2026-08">Aug 2026</time>
       </article>
@@ -97,6 +103,7 @@ nav_order: 2
         <div>
           <h3 class="experience-title" id="experience-bluedot">BlueDot Impact Technical AI Safety Project</h3>
           <p class="experience-role">Remote</p>
+          <p class="experience-description">Completed a five-week AI safety research sprint and facilitated weekly cohort discussions.</p>
         </div>
         <span class="experience-date"><time datetime="2026-07">Jul 2026</time> – <time datetime="2026-08-17">Aug 2026</time></span>
       </article>
@@ -104,6 +111,7 @@ nav_order: 2
         <div>
           <h3 class="experience-title" id="experience-google">Google Machine Learning Bootcamp</h3>
           <p class="experience-role">Seoul, South Korea</p>
+          <p class="experience-description">Led a team that placed in the top 5% in a Kaggle competition.</p>
         </div>
         <span class="experience-date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2023-12">Dec 2023</time></span>
       </article>
@@ -116,6 +124,7 @@ nav_order: 2
         <div>
           <h3 class="experience-title" id="experience-release">ReLease Agent</h3>
           <p class="experience-role">Founder · Seoul, South Korea</p>
+          <p class="experience-description">Deployed an on-premise AI consulting chatbot with the Seoul Metropolitan Government, grounded in commercial-district data.</p>
         </div>
         <span class="experience-date"><time datetime="2025-01">Jan 2025</time> – Present</span>
       </article>
@@ -123,6 +132,7 @@ nav_order: 2
         <div>
           <h3 class="experience-title" id="experience-wonbuilding">Wonbuilding Real Estate Consulting</h3>
           <p class="experience-role">Technical Product Manager &amp; Lead Software Engineer · Seoul, South Korea</p>
+          <p class="experience-description">Built data pipelines that reduced manual data collection time by 80% and an interactive website for real estate market analysis.</p>
         </div>
         <span class="experience-date"><time datetime="2023-04">Apr 2023</time> – <time datetime="2024-12">Dec 2024</time></span>
       </article>
@@ -135,6 +145,7 @@ nav_order: 2
         <div>
           <h3 class="experience-title" id="experience-consulting">Dartmouth Graduate Consulting Group</h3>
           <p class="experience-role">President</p>
+          <p class="experience-description">Lead onboarding and pro bono consulting projects for nonprofits and small businesses.</p>
         </div>
         <span class="experience-date"><time datetime="2025-11">Nov 2025</time> – Present</span>
       </article>
