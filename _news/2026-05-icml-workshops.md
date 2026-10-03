@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two papers accepted to **ICML 2026 Workshops**: CLASP (DEMO) and PolicyLLM (TAIGR). [Publications]({{ '/publications/' | relative_url }})
+Two papers accepted to **ICML 2026 Workshops on DEMO and TAIGR**: CLASP and PolicyLLM.
