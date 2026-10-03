@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two papers accepted to **ICML 2026 workshops**: _CLASP: Retrofitting Cost–Latency SLO Compliance onto Any LLM Router_ (DEMO) and _PolicyLLM: Neuro-Symbolic Policy Extraction and Enforcement for Runtime AI Governance_ (TAIGR).
+Two papers accepted to **ICML 2026 Workshops**: _CLASP: Retrofitting Cost–Latency SLO Compliance onto Any LLM Router_ (DEMO) and _PolicyLLM: Neuro-Symbolic Policy Extraction and Enforcement for Runtime AI Governance_ (TAIGR).

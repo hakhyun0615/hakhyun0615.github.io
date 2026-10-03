@@ -72,7 +72,7 @@
   author      = {Kim, Hak Hyun and Raj, Yash and Vosoughi, Soroush},
   research_area = {interpretability-training},
   research_topic = {training-dynamics},
-  booktitle   = {Advances in Neural Information Processing Systems (NeurIPS), Main Track, Poster},
+  booktitle   = {Advances in Neural Information Processing Systems (NeurIPS), Main Track},
   year        = {2026},
   note        = {<details class="rq"><summary><b>Q.</b> When a capability appears abruptly during training, does the structure behind it change at that moment, or was it already in place?</summary><div class="rq-answer"><b>A.</b> Usually earlier. Tracking the spectra of mean-ablation patching matrices across 150 Pythia trajectories from 70M to 410M, 3 scales &times; 5 tasks &times; 10 seeds, structural reorganization completes before the capability becomes measurable in 94% of runs, by thousands of steps. Ablating at one of those pre-emergence checkpoints confirms it: the components already prominent there carry most of the capability that surfaces later. On sharpness the field has argued over whether the jump happens inside the model or is manufactured by the metric used to score it. It turns out to depend on the task. For subject-verb agreement and induction the behavior curve turns much more sharply than the structural one, while for factual recall and docstrings the two turn together. Both patterns are present, in different tasks.</div></details>}
 }
@@ -83,7 +83,7 @@
   author      = {Kim, Hak Hyun and Raj, Yash and Chin, Peter and Vosoughi, Soroush},
   research_area = {interpretability-training},
   research_topic = {sparse-autoencoders},
-  booktitle   = {Advances in Neural Information Processing Systems (NeurIPS), Main Track, Poster},
+  booktitle   = {Advances in Neural Information Processing Systems (NeurIPS), Main Track},
   year        = {2026},
   note        = {<details class="rq"><summary><b>Q.</b> Can feature absorption, where one sparse autoencoder atom carries several concepts at once, be solved?</summary><div class="rq-answer"><b>A.</b> Largely. Absorption is a spurious local minimum of the training loss. A coherence penalty summing pairwise overlaps raised to <i>p</i> pushes absorbed atoms apart for any <i>p</i> &gt; 0, but the penalty weight this takes is set by the curvature at that minimum, which we derive in closed form and which changes sign at <i>p</i> = 2. Below 2 that curvature is negative, so once the penalty weight passes a threshold the closed form gives, absorption stops being a minimizer and descent leaves it. Above 2 the curvature is positive and no such threshold exists. At exactly 2 the penalty is curvature-blind, though only in the orthogonal idealization. Measured features are correlated, which makes <i>p</i> = 2 slightly destabilizing rather than neutral and, since lower <i>p</i> costs reconstruction, makes it the practical operating point. The predicted ordering holds on Pythia-160M and Gemma-2-2B, where full absorption events drop 89%, not explained by atoms firing less. The effect can reverse for independent-threshold architectures.</div></details>}
 }
@@ -93,7 +93,7 @@
   author      = {Huh, Benjamin and Kim, Hak Hyun and Tian, Yuting and Peng, Jason and Kang, Christopher and Vosoughi, Soroush},
   research_area = {interpretability-training},
   research_topic = {interventions},
-  booktitle   = {Advances in Neural Information Processing Systems (NeurIPS), Main Track, Poster},
+  booktitle   = {Advances in Neural Information Processing Systems (NeurIPS), Main Track},
   year        = {2026},
   note        = {<details class="rq"><summary><b>Q.</b> Do language models actively learn to use shift-invariant attention, or does it simply follow from their positional embeddings?</summary><div class="rq-answer"><b>A.</b> Models actively learn to use it. Targeted ablations degrade performance in proportion to each head's shift-invariant signal, and similar structure appears in models trained with absolute positional embeddings. Its strongest observed role is in offset-structured retrieval and positional routing; how to train it for richer semantic invariances remains an open question.</div></details>}
 }
