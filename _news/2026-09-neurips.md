@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Three papers accepted to the **NeurIPS 2026 Main Track**: _Inside Emergence: Structure-Behaviour Gaps in Language Model Training_, _A Curvature Phase Transition Governs Coherence Penalty Efficiency Against Feature Absorption in SAEs_, and _The Missing Positional Story in LLMs: A Case Study of Shift-Invariant Attention_.
+Three papers accepted to **NeurIPS 2026**: _Inside Emergence: Structure-Behaviour Gaps in Language Model Training_, _A Curvature Phase Transition Governs Coherence Penalty Efficiency Against Feature Absorption in SAEs_, and _The Missing Positional Story in LLMs: A Case Study of Shift-Invariant Attention_.
