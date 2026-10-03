@@ -90,7 +90,7 @@ nav_order: 4
       </li>
       <li>
         <span>Machine Learning and Statistical Data Analysis</span>
-        <span class="teaching-term">Spring 2026</span>
+        <span class="teaching-term">Spring 2026, Fall 2026</span>
       </li>
     </ul>
   </section>

@@ -134,7 +134,7 @@ nav_order: 2
       <article class="experience-entry" aria-labelledby="experience-consulting">
         <div>
           <h3 class="experience-title" id="experience-consulting">Dartmouth Graduate Consulting Group</h3>
-          <p class="experience-role">Vice President</p>
+          <p class="experience-role">President</p>
         </div>
         <span class="experience-date"><time datetime="2025-11">Nov 2025</time> – Present</span>
       </article>
