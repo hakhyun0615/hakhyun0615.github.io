@@ -12,42 +12,6 @@
   note         = {<details class="rq"><summary><b>Q.</b> Two papers each claim that their method explains multi-agent failures better. What has to be specified before those claims can be compared?</summary><div class="rq-answer"><b>A.</b> Two contracts, declared before any method is proposed. The Research Contract fixes what is being explained, to whom, at what intervention unit, within what evaluation bounds, under what adversarial conditions, and with what audit trail. The Agent Contract states the behavior the system was supposed to produce, as obligations, permissions, prohibitions, violation criteria, and accountability chains, which is the baseline a deviation gets explained against. Without both, a reported score is not comparable across papers and cannot be carried into a deployment decision.</div></details>}
 }
 
-@inproceedings{kim2026translation,
-  title       = {<a href="https://aclanthology.org/2026.stereacult-1.11/">Translation Is Not Representation: English-Hub Routing in Cross-Lingual Bias Benchmarks</a>},
-  author      = {Kim, Hak Hyun and Huh, Benjamin},
-  research_area = {interpretability},
-  research_topic = {multilingual},
-  booktitle   = {ACL 2026 Workshop on StereACuLT},
-  note        = {<details class="rq"><summary><b>Q.</b> Are the representations underlying cross-lingual bias benchmark scores language-agnostic?</summary><div class="rq-answer"><b>A.</b> Not necessarily. We compare English bias questions with their Japanese translations across English-centric, Japanese-adapted, and balanced bilingual models. CKA finds strong geometric alignment between the languages in every model. But a multi-anchor logit lens shows that internal language preferences vary with training history despite this similarity, with English-hub signals weakening after Japanese adaptation and under balanced bilingual training. Even with high CKA, cross-lingual bias scores describe language-specific stereotype preferences without establishing language-agnostic representations of bias.</div></details>}
-}
-
-@inproceedings{huh2026easy,
-  title       = {Easy to Add, Hard to Erase: Causal Evidence on Stereotype Editing in LLMs},
-  author      = {Huh, Benjamin and Kim, Hak Hyun and Peng, Jason},
-  research_area = {interpretability},
-  research_topic = {interventions},
-  booktitle   = {ACL 2026 Workshop on StereACuLT},
-  note        = {<details class="rq"><summary><b>Q.</b> If a stereotype is carried by a linear direction in the residual stream, does erasing that direction stop the behavior?</summary><div class="rq-answer"><b>A.</b> No. We build the direction from the gap between a stereotype item and its anti-stereotype twin, measured at the word where the two actually differ, then at the decision token either add that direction back or project it out, and compare the two edits on the same items. Adding it moves the model toward the stereotype; projecting it out shifts confidence without flipping many decisions, because most items sit far from the boundary. Component rankings do not rescue this: their predicted signs are not reliable enough to edit by, and between one in seven and one in four of the top-ranked components push against the intended edit. Finding the direction earns a control knob, not a fix.</div></details>}
-}
-
-@inproceedings{kim2026clasp,
-  title       = {<a href="https://openreview.net/forum?id=D7Z4YZS0zG">CLASP: Retrofitting Cost--Latency SLO Compliance onto Any LLM Router</a>},
-  author      = {Kim, Hak Hyun and Huh, Benjamin and Moon, Jimin and Lee, Chia-Wei and Peng, Jason and Marrero, Wesley J. and Vosoughi, Soroush},
-  research_area = {systems},
-  research_topic = {runtime-control},
-  booktitle   = {ICML 2026 Workshop on DEMO},
-  note        = {<details class="rq"><summary><b>Q.</b> How can an LLM router be kept inside a cost and latency budget, without retraining it?</summary><div class="rq-answer"><b>A.</b> We introduce CLASP, a controller that sits on top of any existing router so that its choices of topology and model tier violate a per-query cost and latency budget no more often than the target allows. Offline, it reads a cost and latency cache and masks out the actions that breach the budget too often, then calibrates one penalty weight for cost and one for latency. Online, it predicts each query's cost and latency and subtracts those two weighted penalties from the router's own quality score before choosing an action. A new budget therefore costs a recomputed mask and two weights rather than a retrained router, and when the deployment drifts the weights keep updating from what actually happened.</div></details>}
-}
-
-@inproceedings{haider2026policyllm,
-  title       = {<a href="https://openreview.net/forum?id=9raGR7DnlY">PolicyLLM: Neuro-Symbolic Policy Extraction and Enforcement for Runtime AI Governance</a>},
-  author      = {Haider*, Syed Ali and Huh*, Benjamin and Kim*, Hak Hyun and Nalagatla*, Goutham and Guerrero Alvarez, Carlos and Raj, Yash and Vosoughi, Soroush},
-  research_area = {systems},
-  research_topic = {runtime-control},
-  booktitle   = {ICML 2026 Workshop on TAIGR},
-  note        = {<details class="rq"><summary><b>Q.</b> How can a deployment produce a per-output record of which policies applied, what facts were checked, and what was decided?</summary><div class="rq-answer"><b>A.</b> We present PolicyLLM, which offline compiles policy documents into a decision graph and uses the Z3 SMT solver to find contradictions among the compiled rules, settling them by an explicit priority ordering. At inference time it both steers generation with policy-derived scaffolding and checks the response against that bundle, routing it to pass, auto-correct, regenerate, or escalate, and appending the decision to a hash-chained log. The solver certifies the rules it was handed, not that those rules were read correctly out of the policy documents, so a response it cannot verify goes to a human reviewer rather than to the user.</div></details>}
-}
-
 @article{kim2026tsaga,
   selected    = {true},
   title       = {<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4971984">TSA-GA Net: A Dual Attention Mechanism for Predicting Real Estate Transaction Prices</a>},
@@ -277,4 +241,40 @@
   research_topic = {adversarial-robustness},
   journal     = {Under review at ICLR 2027},
   note        = {<details class="rq"><summary><b>Q.</b> Can local interactions predict adversarial capture, and is one communication graph always safest?</summary><div class="rq-answer"><b>A.</b> A question-specific switching model calibrated on eight graph–adversary configurations predicts capture on 52 other configurations with mean error 0.012 in the tested six-agent setup. Graph rankings transfer better than absolute capture probabilities, which need recalibration under new questions or attacks. When the adversary chooses its worst-case position, concentrating links on one agent is especially risky; with random placement, rankings can reverse. The most accurate topology also depends on the initial answer distribution and agents’ majority-following behavior. The study thus supports conditional topology selection, not a universally safest graph.</div></details>}
+}
+
+@inproceedings{kim2026translation,
+  title       = {<a href="https://aclanthology.org/2026.stereacult-1.11/">Translation Is Not Representation: English-Hub Routing in Cross-Lingual Bias Benchmarks</a>},
+  author      = {Kim, Hak Hyun and Huh, Benjamin},
+  research_area = {interpretability},
+  research_topic = {multilingual},
+  booktitle   = {ACL 2026 Workshop on StereACuLT},
+  note        = {<details class="rq"><summary><b>Q.</b> Are the representations underlying cross-lingual bias benchmark scores language-agnostic?</summary><div class="rq-answer"><b>A.</b> Not necessarily. We compare English bias questions with their Japanese translations across English-centric, Japanese-adapted, and balanced bilingual models. CKA finds strong geometric alignment between the languages in every model. But a multi-anchor logit lens shows that internal language preferences vary with training history despite this similarity, with English-hub signals weakening after Japanese adaptation and under balanced bilingual training. Even with high CKA, cross-lingual bias scores describe language-specific stereotype preferences without establishing language-agnostic representations of bias.</div></details>}
+}
+
+@inproceedings{huh2026easy,
+  title       = {Easy to Add, Hard to Erase: Causal Evidence on Stereotype Editing in LLMs},
+  author      = {Huh, Benjamin and Kim, Hak Hyun and Peng, Jason},
+  research_area = {interpretability},
+  research_topic = {interventions},
+  booktitle   = {ACL 2026 Workshop on StereACuLT},
+  note        = {<details class="rq"><summary><b>Q.</b> If a stereotype is carried by a linear direction in the residual stream, does erasing that direction stop the behavior?</summary><div class="rq-answer"><b>A.</b> No. We build the direction from the gap between a stereotype item and its anti-stereotype twin, measured at the word where the two actually differ, then at the decision token either add that direction back or project it out, and compare the two edits on the same items. Adding it moves the model toward the stereotype; projecting it out shifts confidence without flipping many decisions, because most items sit far from the boundary. Component rankings do not rescue this: their predicted signs are not reliable enough to edit by, and between one in seven and one in four of the top-ranked components push against the intended edit. Finding the direction earns a control knob, not a fix.</div></details>}
+}
+
+@inproceedings{kim2026clasp,
+  title       = {<a href="https://openreview.net/forum?id=D7Z4YZS0zG">CLASP: Retrofitting Cost--Latency SLO Compliance onto Any LLM Router</a>},
+  author      = {Kim, Hak Hyun and Huh, Benjamin and Moon, Jimin and Lee, Chia-Wei and Peng, Jason and Marrero, Wesley J. and Vosoughi, Soroush},
+  research_area = {systems},
+  research_topic = {runtime-control},
+  booktitle   = {ICML 2026 Workshop on DEMO},
+  note        = {<details class="rq"><summary><b>Q.</b> How can an LLM router be kept inside a cost and latency budget, without retraining it?</summary><div class="rq-answer"><b>A.</b> We introduce CLASP, a controller that sits on top of any existing router so that its choices of topology and model tier violate a per-query cost and latency budget no more often than the target allows. Offline, it reads a cost and latency cache and masks out the actions that breach the budget too often, then calibrates one penalty weight for cost and one for latency. Online, it predicts each query's cost and latency and subtracts those two weighted penalties from the router's own quality score before choosing an action. A new budget therefore costs a recomputed mask and two weights rather than a retrained router, and when the deployment drifts the weights keep updating from what actually happened.</div></details>}
+}
+
+@inproceedings{haider2026policyllm,
+  title       = {<a href="https://openreview.net/forum?id=9raGR7DnlY">PolicyLLM: Neuro-Symbolic Policy Extraction and Enforcement for Runtime AI Governance</a>},
+  author      = {Haider*, Syed Ali and Huh*, Benjamin and Kim*, Hak Hyun and Nalagatla*, Goutham and Guerrero Alvarez, Carlos and Raj, Yash and Vosoughi, Soroush},
+  research_area = {systems},
+  research_topic = {runtime-control},
+  booktitle   = {ICML 2026 Workshop on TAIGR},
+  note        = {<details class="rq"><summary><b>Q.</b> How can a deployment produce a per-output record of which policies applied, what facts were checked, and what was decided?</summary><div class="rq-answer"><b>A.</b> We present PolicyLLM, which offline compiles policy documents into a decision graph and uses the Z3 SMT solver to find contradictions among the compiled rules, settling them by an explicit priority ordering. At inference time it both steers generation with policy-derived scaffolding and checks the response against that bundle, routing it to pass, auto-correct, regenerate, or escalate, and appending the decision to a hash-chained log. The solver certifies the rules it was handed, not that those rules were read correctly out of the policy documents, so a response it cannot verify goes to a human reviewer rather than to the user.</div></details>}
 }
