@@ -25,7 +25,7 @@ latest_posts:
 ---
 
 <style>
-  /* Keep the portrait compact and preserve its natural proportions. */
+  /* Preserve the portrait's proportions beside the full introduction. */
   .profile {
     width: min(70%, 240px);
     margin: 0 auto 1.5rem;
@@ -42,7 +42,7 @@ latest_posts:
     height: auto;
   }
 
-  @media (max-width: 575.98px) {
+  @media (max-width: 767.98px) {
     .post article {
       display: flex;
       flex-direction: column;
@@ -54,10 +54,29 @@ latest_posts:
     }
   }
 
-  @media (min-width: 576px) {
-    .profile {
-      width: 19%;
-      margin: 0 1rem 1rem 0;
+  @media (min-width: 768px) {
+    .post article {
+      display: grid;
+      grid-template-columns: minmax(0, 28%) minmax(0, 1fr);
+      column-gap: 1.5rem;
+      align-items: start;
+    }
+
+    .post article > * {
+      grid-column: 1 / -1;
+    }
+
+    .post article > .profile {
+      grid-column: 1;
+      grid-row: 1;
+      width: 100%;
+      margin: 0;
+    }
+
+    .post article > .clearfix {
+      grid-column: 2;
+      grid-row: 1;
+      min-width: 0;
     }
   }
 
