@@ -25,7 +25,7 @@ latest_posts:
 ---
 
 <style>
-  /* Keep the portrait compact, with the goal paragraph below the introduction. */
+  /* Align the portrait with the introduction, keeping the goal paragraph below. */
   .profile {
     width: min(70%, 240px);
     margin: 0 auto 1.5rem;
@@ -59,13 +59,59 @@ latest_posts:
   }
 
   @media (min-width: 768px) {
+    .post article {
+      display: grid;
+      grid-template-columns: 19% minmax(0, 1fr);
+      column-gap: 1.5rem;
+    }
+
+    .post article > * {
+      grid-column: 1 / -1;
+    }
+
     .post article > .profile {
-      width: 19%;
-      margin: 0 1.5rem 1rem 0;
+      grid-column: 1;
+      grid-row: 1 / 4;
+      position: relative;
+      width: 100%;
+      min-height: 0;
+      margin: 0;
+    }
+
+    .profile figure {
+      position: absolute;
+      inset: 0;
+    }
+
+    .profile picture,
+    .profile img {
+      height: 100%;
+    }
+
+    .profile img {
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .post article > .clearfix {
+      display: contents;
+    }
+
+    .post article > .clearfix::after {
+      display: none;
     }
 
     .post article > .clearfix > p:not(.research-goal) {
-      margin-left: calc(19% + 1.5rem);
+      grid-column: 2;
+    }
+
+    .post article > .clearfix > p:nth-of-type(3) {
+      margin-bottom: 0;
+    }
+
+    .research-goal {
+      grid-column: 1 / -1;
+      margin-top: 1rem;
     }
   }
 
