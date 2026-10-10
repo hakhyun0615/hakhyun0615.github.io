@@ -25,7 +25,7 @@ latest_posts:
 ---
 
 <style>
-  /* Preserve the portrait's proportions beside the full introduction. */
+  /* Keep the portrait compact, with the goal paragraph below the introduction. */
   .profile {
     width: min(70%, 240px);
     margin: 0 auto 1.5rem;
@@ -42,6 +42,10 @@ latest_posts:
     height: auto;
   }
 
+  .research-goal {
+    clear: both;
+  }
+
   @media (max-width: 767.98px) {
     .post article {
       display: flex;
@@ -55,28 +59,13 @@ latest_posts:
   }
 
   @media (min-width: 768px) {
-    .post article {
-      display: grid;
-      grid-template-columns: minmax(0, 28%) minmax(0, 1fr);
-      column-gap: 1.5rem;
-      align-items: start;
-    }
-
-    .post article > * {
-      grid-column: 1 / -1;
-    }
-
     .post article > .profile {
-      grid-column: 1;
-      grid-row: 1;
-      width: 100%;
-      margin: 0;
+      width: 19%;
+      margin: 0 1.5rem 1rem 0;
     }
 
-    .post article > .clearfix {
-      grid-column: 2;
-      grid-row: 1;
-      min-width: 0;
+    .post article > .clearfix > p:not(.research-goal) {
+      margin-left: calc(19% + 1.5rem);
     }
   }
 
@@ -93,3 +82,4 @@ My research focuses on **AI safety**. I combine controlled experiments and mathe
 My research spans mechanistic interpretability, training dynamics, multi-agent systems, AI systems, and applied machine learning. (Click a research question in [Publications]({{ '/publications/' | relative_url }}) to see the answer.)
 
 **My goal is to design AI models that circumvent the need for post-hoc reverse-engineering and post-training alignment interventions. My research investigates how to construct inherently interpretable architectures with legible world models, and how pretraining paradigms dictate the internal computations that naturally drive aligned behavior.**
+{: .research-goal }
