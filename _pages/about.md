@@ -42,6 +42,10 @@ latest_posts:
     height: auto;
   }
 
+  .post article > .clearfix + h2 {
+    margin-top: 2rem;
+  }
+
   @media (max-width: 767.98px) {
     .post article {
       display: flex;
