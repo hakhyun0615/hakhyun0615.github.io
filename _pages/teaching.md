@@ -25,12 +25,6 @@ nav_order: 3
     line-height: 1.5;
     color: var(--global-theme-color);
   }
-  .teaching-list .teaching-role {
-    margin: 0.4rem 0 0;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: var(--global-text-color-light);
-  }
   .teaching-list .teaching-term {
     font-size: 0.82rem;
     font-weight: 300;
@@ -79,11 +73,8 @@ nav_order: 3
 </style>
 
 <div class="teaching-list">
-  <section class="teaching-institution" aria-labelledby="teaching-dartmouth">
-    <div>
-      <h2 id="teaching-dartmouth">Dartmouth College</h2>
-      <p class="teaching-role">Teaching Assistant</p>
-    </div>
+  <section class="teaching-institution" aria-labelledby="teaching-assistant">
+    <h2 id="teaching-assistant">Teaching Assistant</h2>
     <ul class="teaching-courses" aria-label="Courses">
       <li>
         <span>Applied Computer Science</span>

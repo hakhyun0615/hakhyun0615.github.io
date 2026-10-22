@@ -199,6 +199,21 @@ nav_order: 5
       </li>
     </ul>
   </section>
+  <section class="certification-category" aria-labelledby="certifications-research-ethics">
+    <h2 id="certifications-research-ethics">Research Ethics</h2>
+    <ul class="credential-list">
+      <li class="credential">
+        <a class="credential-link" href="{{ '/assets/pdf/certificates/citi-social-behavioral-research.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="credential-heading">
+            <h3>CITI Human Research: Social/Behavioral Research</h3>
+            <time datetime="2025-10" aria-label="October 2025">Oct 2025</time>
+          </div>
+          <p class="credential-issuer">CITI Program</p>
+          <p class="credential-id">Record ID <code>72916202</code></p>
+        </a>
+      </li>
+    </ul>
+  </section>
   <section class="certification-category" aria-labelledby="certifications-wine">
     <h2 id="certifications-wine">Wine</h2>
     <ul class="credential-list">
@@ -215,21 +230,6 @@ nav_order: 5
           <time datetime="2023-01" aria-label="January 2023">Jan 2023</time>
         </div>
         <p class="credential-issuer">WSET</p>
-      </li>
-    </ul>
-  </section>
-  <section class="certification-category" aria-labelledby="certifications-research-ethics">
-    <h2 id="certifications-research-ethics">Research Ethics</h2>
-    <ul class="credential-list">
-      <li class="credential">
-        <a class="credential-link" href="{{ '/assets/pdf/certificates/citi-social-behavioral-research.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
-          <div class="credential-heading">
-            <h3>CITI Human Research: Social/Behavioral Research</h3>
-            <time datetime="2025-10" aria-label="October 2025">Oct 2025</time>
-          </div>
-          <p class="credential-issuer">CITI Program · Dartmouth College</p>
-          <p class="credential-id">Record ID <code>72916202</code></p>
-        </a>
       </li>
     </ul>
   </section>

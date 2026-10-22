@@ -110,8 +110,15 @@ latest_posts:
     }
   }
 
-  /* Keep the social links compact. */
+  .post article > .social {
+    margin-top: 2.5rem;
+  }
+
   .social .contact-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
     font-size: 2.2rem;
   }
 </style>
