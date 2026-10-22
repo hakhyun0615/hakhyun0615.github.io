@@ -173,12 +173,14 @@ nav_order: 5
         </a>
       </li>
       <li class="credential">
-        <div class="credential-heading">
-          <h3>Google Project Management</h3>
-          <time datetime="2025-10" aria-label="October 2025">Oct 2025</time>
-        </div>
-        <p class="credential-issuer">Google</p>
-        <p class="credential-id">Credential ID <code>E7XHI3POS6XR</code></p>
+        <a class="credential-link" href="{{ '/assets/img/certificates/google-project-management.jpeg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="credential-heading">
+            <h3>Google Project Management</h3>
+            <time datetime="2025-10" aria-label="October 2025">Oct 2025</time>
+          </div>
+          <p class="credential-issuer">Google</p>
+          <p class="credential-id">Credential ID <code>E7XHI3POS6XR</code></p>
+        </a>
       </li>
     </ul>
   </section>
@@ -186,12 +188,14 @@ nav_order: 5
     <h2 id="certifications-cloud">Cloud</h2>
     <ul class="credential-list">
       <li class="credential">
-        <div class="credential-heading">
-          <h3>Cloud Digital Leader</h3>
-          <time datetime="2025-10" aria-label="October 2025">Oct 2025</time>
-        </div>
-        <p class="credential-issuer">Google</p>
-        <p class="credential-id">Credential ID <code>110519</code></p>
+        <a class="credential-link" href="https://www.credly.com/badges/cf82462d-84ae-48c1-8f11-1ec2533d1c95/linked_in_profile" target="_blank" rel="noopener noreferrer">
+          <div class="credential-heading">
+            <h3>Cloud Digital Leader</h3>
+            <time datetime="2025-10" aria-label="October 2025">Oct 2025</time>
+          </div>
+          <p class="credential-issuer">Google</p>
+          <p class="credential-id">Credential ID <code>110519</code></p>
+        </a>
       </li>
     </ul>
   </section>
