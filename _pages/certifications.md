@@ -44,6 +44,13 @@ nav_order: 5
   .certifications-list .credential:last-child {
     padding-bottom: 0;
   }
+  .certifications-list .credential-link,
+  .certifications-list .credential-link:hover,
+  .certifications-list .credential-link:focus {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
   .certifications-list .credential-heading {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
@@ -112,35 +119,43 @@ nav_order: 5
     <h2 id="certifications-ai-data">AI &amp; Data</h2>
     <ul class="credential-list">
       <li class="credential">
-        <div class="credential-heading">
-          <h3>TensorFlow Developer</h3>
-          <time datetime="2024-04" aria-label="April 2024">Apr 2024</time>
-        </div>
-        <p class="credential-issuer">TensorFlow Certificate Program</p>
-        <p class="credential-id">Credential ID <code>102450054</code></p>
+        <a class="credential-link" href="{{ '/assets/pdf/certificates/tensorflow-developer.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="credential-heading">
+            <h3>TensorFlow Developer</h3>
+            <time datetime="2024-04" aria-label="April 2024">Apr 2024</time>
+          </div>
+          <p class="credential-issuer">TensorFlow Certificate Program</p>
+          <p class="credential-id">Credential ID <code>102450054</code></p>
+        </a>
       </li>
       <li class="credential">
-        <div class="credential-heading">
-          <h3>Machine Learning Specialization</h3>
-          <time datetime="2024-03" aria-label="March 2024">Mar 2024</time>
-        </div>
-        <p class="credential-issuer">Stanford University</p>
-        <p class="credential-id">Credential ID <code>RMNSTYNLRLX5</code></p>
+        <a class="credential-link" href="{{ '/assets/pdf/certificates/machine-learning-specialization.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="credential-heading">
+            <h3>Machine Learning Specialization</h3>
+            <time datetime="2024-03" aria-label="March 2024">Mar 2024</time>
+          </div>
+          <p class="credential-issuer">Stanford University</p>
+          <p class="credential-id">Credential ID <code>RMNSTYNLRLX5</code></p>
+        </a>
       </li>
       <li class="credential">
-        <div class="credential-heading">
-          <h3>Deep Learning Specialization</h3>
-          <time datetime="2023-10" aria-label="October 2023">Oct 2023</time>
-        </div>
-        <p class="credential-issuer">DeepLearning.AI</p>
-        <p class="credential-id">Credential ID <code>8Y3XRDQA6HDB</code></p>
+        <a class="credential-link" href="{{ '/assets/pdf/certificates/deep-learning-specialization.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="credential-heading">
+            <h3>Deep Learning Specialization</h3>
+            <time datetime="2023-10" aria-label="October 2023">Oct 2023</time>
+          </div>
+          <p class="credential-issuer">DeepLearning.AI</p>
+          <p class="credential-id">Credential ID <code>8Y3XRDQA6HDB</code></p>
+        </a>
       </li>
       <li class="credential">
-        <div class="credential-heading">
-          <h3>Big Data Analysis Engineer</h3>
-          <time datetime="2022-07" aria-label="July 2022">Jul 2022</time>
-        </div>
-        <p class="credential-issuer">Korea Data Agency</p>
+        <a class="credential-link" href="{{ '/assets/pdf/certificates/big-data-analysis-engineer.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="credential-heading">
+            <h3>Big Data Analysis Engineer</h3>
+            <time datetime="2022-07" aria-label="July 2022">Jul 2022</time>
+          </div>
+          <p class="credential-issuer">Korea Data Agency</p>
+        </a>
       </li>
     </ul>
   </section>
@@ -148,12 +163,14 @@ nav_order: 5
     <h2 id="certifications-project-management">Project Management</h2>
     <ul class="credential-list">
       <li class="credential">
-        <div class="credential-heading">
-          <h3>Certified ScrumMaster (CSM)</h3>
-          <time datetime="2025-10" aria-label="October 2025">Oct 2025</time>
-        </div>
-        <p class="credential-issuer">Scrum Alliance</p>
-        <p class="credential-id">Credential ID <code>2130286</code></p>
+        <a class="credential-link" href="{{ '/assets/pdf/certificates/certified-scrummaster.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="credential-heading">
+            <h3>Certified ScrumMaster (CSM)</h3>
+            <time datetime="2025-10" aria-label="October 2025">Oct 2025</time>
+          </div>
+          <p class="credential-issuer">Scrum Alliance</p>
+          <p class="credential-id">Credential ID <code>2130286</code></p>
+        </a>
       </li>
       <li class="credential">
         <div class="credential-heading">
@@ -194,6 +211,21 @@ nav_order: 5
           <time datetime="2023-01" aria-label="January 2023">Jan 2023</time>
         </div>
         <p class="credential-issuer">WSET</p>
+      </li>
+    </ul>
+  </section>
+  <section class="certification-category" aria-labelledby="certifications-research-ethics">
+    <h2 id="certifications-research-ethics">Research Ethics</h2>
+    <ul class="credential-list">
+      <li class="credential">
+        <a class="credential-link" href="{{ '/assets/pdf/certificates/citi-social-behavioral-research.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+          <div class="credential-heading">
+            <h3>CITI Human Research: Social/Behavioral Research</h3>
+            <time datetime="2025-10" aria-label="October 2025">Oct 2025</time>
+          </div>
+          <p class="credential-issuer">CITI Program · Dartmouth College</p>
+          <p class="credential-id">Record ID <code>72916202</code></p>
+        </a>
       </li>
     </ul>
   </section>

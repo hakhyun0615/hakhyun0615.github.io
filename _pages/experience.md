@@ -119,14 +119,14 @@ nav_order: 2
     <div class="experience-entries">
       <article class="experience-entry" aria-labelledby="experience-release">
         <div>
-          <h3 class="experience-title" id="experience-release"><a href="https://hakhyun0615.github.io/ReleaseAgent_IR/ir_compressed.pdf" target="_blank" rel="noopener noreferrer">ReLease Agent</a></h3>
+          <h3 class="experience-title" id="experience-release"><a href="{{ '/assets/pdf/release-agent-ir.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">ReLease Agent</a></h3>
           <p class="experience-role">Founder · Seoul, South Korea</p>
         </div>
         <span class="experience-date"><time datetime="2025-01">Jan 2025</time> – Present</span>
       </article>
       <article class="experience-entry" aria-labelledby="experience-wonbuilding">
         <div>
-          <h3 class="experience-title" id="experience-wonbuilding"><a href="https://hakhyun0615.github.io/Wonbuilding_IR/ir.pdf" target="_blank" rel="noopener noreferrer">Wonbuilding Real Estate Consulting</a></h3>
+          <h3 class="experience-title" id="experience-wonbuilding"><a href="{{ '/assets/pdf/wonbuilding-ir.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Wonbuilding Real Estate Consulting</a></h3>
           <p class="experience-role">Technical Product Manager &amp; Lead Software Engineer · Seoul, South Korea</p>
         </div>
         <span class="experience-date"><time datetime="2023-04">Apr 2023</time> – <time datetime="2024-12">Dec 2024</time></span>
