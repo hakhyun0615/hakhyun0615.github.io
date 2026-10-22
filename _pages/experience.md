@@ -49,6 +49,11 @@ nav_order: 2
     line-height: 1.45;
     color: var(--global-text-color);
   }
+  .experience-list .experience-title a,
+  .experience-list .experience-title a:hover,
+  .experience-list .experience-title a:focus {
+    color: inherit;
+  }
   .experience-list .experience-role {
     margin: 0.3rem 0 0;
     font-size: 0.9rem;

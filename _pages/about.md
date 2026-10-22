@@ -25,7 +25,7 @@ latest_posts:
 ---
 
 <style>
-  /* Align the portrait with the introduction, keeping the goal paragraph below. */
+  /* Align the portrait with the introduction. */
   .profile {
     width: min(70%, 240px);
     margin: 0 auto 1.5rem;
@@ -40,10 +40,6 @@ latest_posts:
     display: block;
     width: 100%;
     height: auto;
-  }
-
-  .research-goal {
-    clear: both;
   }
 
   @media (max-width: 767.98px) {
@@ -101,17 +97,12 @@ latest_posts:
       display: none;
     }
 
-    .post article > .clearfix > p:not(.research-goal) {
+    .post article > .clearfix > p {
       grid-column: 2;
     }
 
     .post article > .clearfix > p:nth-of-type(3) {
       margin-bottom: 0;
-    }
-
-    .research-goal {
-      grid-column: 1 / -1;
-      margin-top: 1rem;
     }
   }
 
@@ -126,6 +117,3 @@ I am an M.S. student in Computer Science at Dartmouth College, advised by [Sorou
 My research focuses on **AI safety**. I combine controlled experiments and mathematical analysis to study how internal representations shape behavior and to evaluate the reliability of AI systems.
 
 My research spans mechanistic interpretability, training dynamics, multi-agent systems, AI systems, and applied machine learning. (Click a research question in [Publications]({{ '/publications/' | relative_url }}) to see the answer.)
-
-**My goal is to design AI models that circumvent the need for post-hoc reverse-engineering and post-training alignment interventions. My research investigates how to construct inherently interpretable architectures with legible world models, and how pretraining paradigms dictate the internal computations that naturally drive aligned behavior.**
-{: .research-goal }
