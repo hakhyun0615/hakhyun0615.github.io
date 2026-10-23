@@ -4,7 +4,7 @@ permalink: /contact/
 title: contact
 description:
 nav: true
-nav_order: 6
+nav_order: 7
 ---
 
 Email is the best way to reach me.

@@ -88,32 +88,6 @@ nav_order: 2
 </style>
 
 <div class="experience-list">
-  <section class="experience-section" aria-labelledby="honors-awards">
-    <h2 id="honors-awards">Honors, Awards &amp; Research Support</h2>
-    <div class="experience-entries">
-      <article class="experience-entry" aria-labelledby="award-aws">
-        <div>
-          <h3 class="experience-title" id="award-aws">AWS Bedrock Grant</h3>
-          <p class="experience-role">Amazon Web Services</p>
-        </div>
-        <time class="experience-date" datetime="2026">2026</time>
-      </article>
-      <article class="experience-entry" aria-labelledby="award-neukom">
-        <div>
-          <h3 class="experience-title" id="award-neukom"><a href="https://neukom.dartmouth.edu/funding/students/travel-grants" target="_blank" rel="noopener noreferrer">Neukom Travel Grant</a></h3>
-          <p class="experience-role">Dartmouth College</p>
-        </div>
-        <time class="experience-date" datetime="2026">2026</time>
-      </article>
-      <article class="experience-entry" aria-labelledby="award-guarini">
-        <div>
-          <h3 class="experience-title" id="award-guarini"><a href="https://guarinigrad.dartmouth.edu/funds-for-travel/" target="_blank" rel="noopener noreferrer">Guarini Graduate Student Travel Award</a></h3>
-          <p class="experience-role">Dartmouth College</p>
-        </div>
-        <time class="experience-date" datetime="2026">2026</time>
-      </article>
-    </div>
-  </section>
   <section class="experience-section" aria-labelledby="research-programs">
     <h2 id="research-programs">Research Programs</h2>
     <div class="experience-entries">
