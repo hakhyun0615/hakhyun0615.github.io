@@ -189,15 +189,6 @@
   note        = {<details class="rq"><summary><b>Q.</b> How much of a language-model persona can a small trait mixture explain, and does that mixture affect behavior?</summary><div class="rq-answer"><b>A.</b> Across 37 personas and three models, mixtures from a 60-trait dictionary use a median of six traits and capture roughly half the persona direction’s length. Adding and removing these mixtures changes recognition more than matched random edits; related mixtures also affect sycophancy and refusal. Broad persona resemblance is easier to recover than distinctions between similar characters. Because the trait dictionary is correlated and linearly dependent, these recipes are not uniquely identified psychological primitives, and the joint interventions do not isolate each trait’s causal contribution.</div></details>}
 }
 
-@article{kim2027whichtask,
-  title       = {<a href="https://openreview.net/pdf?id=PmN7pxrYc3">Which Task Loses? Understanding Asymmetrical Degradation in Model Merging</a>},
-  author      = {Kim, Hak Hyun and Chin, Peter},
-  research_area = {systems},
-  research_topic = {model-merging},
-  journal     = {Under review at ICLR 2027},
-  note        = {<details class="rq"><summary><b>Q.</b> Which task suffers most when fine-tuned models are merged, and can that damage be reduced?</summary><div class="rq-answer"><b>A.</b> Under explicit curvature and stationarity assumptions, two-sided loss bounds predict when the smaller task vector’s task suffers more. GLUE experiments support this ordering under unequal training exposure, while matching exposure compresses norm differences and removes reliable norm-based ordering. On four tested pairs in two model families, shrinking only the larger vector protects the smaller task better than uniform scaling; equalizing at fixed total norm can instead stretch the smaller vector and harm both tasks. Shrinkage can cost the larger task, and the bounds are conditional rather than certified capacity limits for real networks.</div></details>}
-}
-
 @article{huh2027morphsae,
   title       = {<a href="https://openreview.net/pdf?id=q0QR1ze7vR">MorphSAE: Reserved Sparse Slots without Automatic Component Recovery</a>},
   author      = {Huh, Benjamin and Kim, Hak Hyun and Vosoughi, Soroush},
